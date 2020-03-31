@@ -201,12 +201,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="RMS_db.mdf">
+    <Content Include="RMS_db1.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="RMS_db_log.ldf">
+    <Content Include="RMS_db1_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>RMS_db.mdf</DependentUpon>
+      <DependentUpon>RMS_db1.mdf</DependentUpon>
     </Content>
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
