@@ -199,11 +199,13 @@ Partial Class Form1
         '
         'disTableEmpty
         '
+        Me.disTableEmpty.BackColor = System.Drawing.Color.LightGreen
+        Me.disTableEmpty.Enabled = False
         Me.disTableEmpty.Location = New System.Drawing.Point(31, 95)
         Me.disTableEmpty.Name = "disTableEmpty"
         Me.disTableEmpty.Size = New System.Drawing.Size(94, 48)
         Me.disTableEmpty.TabIndex = 2
-        Me.disTableEmpty.UseVisualStyleBackColor = True
+        Me.disTableEmpty.UseVisualStyleBackColor = False
         '
         'Label2
         '
@@ -216,11 +218,13 @@ Partial Class Form1
         '
         'disTableFull
         '
+        Me.disTableFull.BackColor = System.Drawing.Color.LightCoral
+        Me.disTableFull.Enabled = False
         Me.disTableFull.Location = New System.Drawing.Point(31, 41)
         Me.disTableFull.Name = "disTableFull"
         Me.disTableFull.Size = New System.Drawing.Size(94, 48)
         Me.disTableFull.TabIndex = 0
-        Me.disTableFull.UseVisualStyleBackColor = True
+        Me.disTableFull.UseVisualStyleBackColor = False
         '
         'btnOrder
         '
@@ -241,7 +245,7 @@ Partial Class Form1
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
