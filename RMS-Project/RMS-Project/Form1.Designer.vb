@@ -48,9 +48,10 @@ Partial Class Form1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("TH SarabunPSK", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(328, 22)
+        Me.Label1.Location = New System.Drawing.Point(437, 27)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(135, 53)
+        Me.Label1.Size = New System.Drawing.Size(171, 66)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "โต๊ะอาหาร"
         '
@@ -67,99 +68,111 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.btnTableA2)
         Me.GroupBox1.Controls.Add(Me.btnTableA1)
         Me.GroupBox1.Font = New System.Drawing.Font("TH SarabunPSK", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(25, 95)
+        Me.GroupBox1.Location = New System.Drawing.Point(33, 117)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(462, 169)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(616, 208)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "แผนผังโต๊ะ"
         '
         'btnTableB5
         '
-        Me.btnTableB5.Location = New System.Drawing.Point(370, 95)
+        Me.btnTableB5.Location = New System.Drawing.Point(493, 117)
+        Me.btnTableB5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnTableB5.Name = "btnTableB5"
-        Me.btnTableB5.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableB5.Size = New System.Drawing.Size(113, 59)
         Me.btnTableB5.TabIndex = 9
         Me.btnTableB5.Text = "B5"
         Me.btnTableB5.UseVisualStyleBackColor = True
         '
         'btnTableB4
         '
-        Me.btnTableB4.Location = New System.Drawing.Point(279, 95)
+        Me.btnTableB4.Location = New System.Drawing.Point(372, 117)
+        Me.btnTableB4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnTableB4.Name = "btnTableB4"
-        Me.btnTableB4.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableB4.Size = New System.Drawing.Size(113, 59)
         Me.btnTableB4.TabIndex = 8
         Me.btnTableB4.Text = "B4"
         Me.btnTableB4.UseVisualStyleBackColor = True
         '
         'btnTableB3
         '
-        Me.btnTableB3.Location = New System.Drawing.Point(188, 95)
+        Me.btnTableB3.Location = New System.Drawing.Point(251, 117)
+        Me.btnTableB3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnTableB3.Name = "btnTableB3"
-        Me.btnTableB3.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableB3.Size = New System.Drawing.Size(113, 59)
         Me.btnTableB3.TabIndex = 7
         Me.btnTableB3.Text = "B3"
         Me.btnTableB3.UseVisualStyleBackColor = True
         '
         'btnTableB2
         '
-        Me.btnTableB2.Location = New System.Drawing.Point(97, 95)
+        Me.btnTableB2.Location = New System.Drawing.Point(129, 117)
+        Me.btnTableB2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnTableB2.Name = "btnTableB2"
-        Me.btnTableB2.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableB2.Size = New System.Drawing.Size(113, 59)
         Me.btnTableB2.TabIndex = 6
         Me.btnTableB2.Text = "B2"
         Me.btnTableB2.UseVisualStyleBackColor = True
         '
         'btnTableB1
         '
-        Me.btnTableB1.Location = New System.Drawing.Point(6, 95)
+        Me.btnTableB1.Location = New System.Drawing.Point(8, 117)
+        Me.btnTableB1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnTableB1.Name = "btnTableB1"
-        Me.btnTableB1.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableB1.Size = New System.Drawing.Size(113, 59)
         Me.btnTableB1.TabIndex = 5
         Me.btnTableB1.Text = "B1"
         Me.btnTableB1.UseVisualStyleBackColor = True
         '
         'btnTableA5
         '
-        Me.btnTableA5.Location = New System.Drawing.Point(370, 41)
+        Me.btnTableA5.Location = New System.Drawing.Point(493, 50)
+        Me.btnTableA5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnTableA5.Name = "btnTableA5"
-        Me.btnTableA5.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableA5.Size = New System.Drawing.Size(113, 59)
         Me.btnTableA5.TabIndex = 4
         Me.btnTableA5.Text = "A5"
         Me.btnTableA5.UseVisualStyleBackColor = True
         '
         'btnTableA4
         '
-        Me.btnTableA4.Location = New System.Drawing.Point(279, 41)
+        Me.btnTableA4.Location = New System.Drawing.Point(372, 50)
+        Me.btnTableA4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnTableA4.Name = "btnTableA4"
-        Me.btnTableA4.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableA4.Size = New System.Drawing.Size(113, 59)
         Me.btnTableA4.TabIndex = 3
         Me.btnTableA4.Text = "A4"
         Me.btnTableA4.UseVisualStyleBackColor = True
         '
         'btnTableA3
         '
-        Me.btnTableA3.Location = New System.Drawing.Point(188, 41)
+        Me.btnTableA3.Location = New System.Drawing.Point(251, 50)
+        Me.btnTableA3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnTableA3.Name = "btnTableA3"
-        Me.btnTableA3.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableA3.Size = New System.Drawing.Size(113, 59)
         Me.btnTableA3.TabIndex = 2
         Me.btnTableA3.Text = "A3"
         Me.btnTableA3.UseVisualStyleBackColor = True
         '
         'btnTableA2
         '
-        Me.btnTableA2.Location = New System.Drawing.Point(97, 41)
+        Me.btnTableA2.Location = New System.Drawing.Point(129, 50)
+        Me.btnTableA2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnTableA2.Name = "btnTableA2"
-        Me.btnTableA2.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableA2.Size = New System.Drawing.Size(113, 59)
         Me.btnTableA2.TabIndex = 1
         Me.btnTableA2.Text = "A2"
         Me.btnTableA2.UseVisualStyleBackColor = True
         '
         'btnTableA1
         '
-        Me.btnTableA1.Location = New System.Drawing.Point(6, 41)
+        Me.btnTableA1.Location = New System.Drawing.Point(8, 50)
+        Me.btnTableA1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnTableA1.Name = "btnTableA1"
-        Me.btnTableA1.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableA1.Size = New System.Drawing.Size(113, 59)
         Me.btnTableA1.TabIndex = 0
         Me.btnTableA1.Text = "A1"
         Me.btnTableA1.UseVisualStyleBackColor = True
@@ -171,9 +184,11 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.disTableFull)
         Me.GroupBox2.Font = New System.Drawing.Font("TH SarabunPSK", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(493, 95)
+        Me.GroupBox2.Location = New System.Drawing.Point(657, 117)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(251, 169)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(335, 208)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "สถานะโต๊ะ"
@@ -181,58 +196,64 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(131, 101)
+        Me.Label3.Location = New System.Drawing.Point(175, 124)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(82, 36)
+        Me.Label3.Size = New System.Drawing.Size(105, 45)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "โต๊ะที่ว่าง"
         '
         'disTableEmpty
         '
-        Me.disTableEmpty.Location = New System.Drawing.Point(31, 95)
+        Me.disTableEmpty.Location = New System.Drawing.Point(41, 117)
+        Me.disTableEmpty.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.disTableEmpty.Name = "disTableEmpty"
-        Me.disTableEmpty.Size = New System.Drawing.Size(94, 48)
+        Me.disTableEmpty.Size = New System.Drawing.Size(125, 59)
         Me.disTableEmpty.TabIndex = 2
         Me.disTableEmpty.UseVisualStyleBackColor = True
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(131, 47)
+        Me.Label2.Location = New System.Drawing.Point(175, 58)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 36)
+        Me.Label2.Size = New System.Drawing.Size(130, 45)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "โต๊ะที่ใช้งาน"
         '
         'disTableFull
         '
-        Me.disTableFull.Location = New System.Drawing.Point(31, 41)
+        Me.disTableFull.Location = New System.Drawing.Point(41, 50)
+        Me.disTableFull.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.disTableFull.Name = "disTableFull"
-        Me.disTableFull.Size = New System.Drawing.Size(94, 48)
+        Me.disTableFull.Size = New System.Drawing.Size(125, 59)
         Me.disTableFull.TabIndex = 0
         Me.disTableFull.UseVisualStyleBackColor = True
         '
         'btnOrder
         '
         Me.btnOrder.Font = New System.Drawing.Font("TH SarabunPSK", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOrder.Location = New System.Drawing.Point(337, 292)
+        Me.btnOrder.Location = New System.Drawing.Point(449, 359)
+        Me.btnOrder.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnOrder.Name = "btnOrder"
-        Me.btnOrder.Size = New System.Drawing.Size(126, 67)
+        Me.btnOrder.Size = New System.Drawing.Size(168, 82)
         Me.btnOrder.TabIndex = 3
         Me.btnOrder.Text = "สั่งอาหาร"
         Me.btnOrder.UseVisualStyleBackColor = True
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(772, 396)
+        Me.ClientSize = New System.Drawing.Size(1029, 487)
         Me.Controls.Add(Me.btnOrder)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)

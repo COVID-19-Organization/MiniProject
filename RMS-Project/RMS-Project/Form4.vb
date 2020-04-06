@@ -4,5 +4,6 @@
 
 
 
+        Me.ReportViewer1.RefreshReport
     End Sub
 End Class
