@@ -39,6 +39,7 @@ Partial Class Form1
         Me.disTableEmpty = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.disTableFull = New System.Windows.Forms.Button()
+        Me.btnOrder = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -211,11 +212,22 @@ Partial Class Form1
         Me.disTableFull.TabIndex = 0
         Me.disTableFull.UseVisualStyleBackColor = True
         '
+        'btnOrder
+        '
+        Me.btnOrder.Font = New System.Drawing.Font("TH SarabunPSK", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOrder.Location = New System.Drawing.Point(337, 292)
+        Me.btnOrder.Name = "btnOrder"
+        Me.btnOrder.Size = New System.Drawing.Size(126, 67)
+        Me.btnOrder.TabIndex = 3
+        Me.btnOrder.Text = "สั่งอาหาร"
+        Me.btnOrder.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(772, 396)
+        Me.Controls.Add(Me.btnOrder)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
@@ -247,4 +259,5 @@ Partial Class Form1
     Friend WithEvents disTableEmpty As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents disTableFull As Button
+    Friend WithEvents btnOrder As Button
 End Class
