@@ -22,13 +22,40 @@ Partial Class Form3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.DataSet1 = New RMS_Project.DataSet1()
+        Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataTable1TableAdapter = New RMS_Project.DataSet1TableAdapters.DataTable1TableAdapter()
+        Me.Menu = New RMS_Project.menu()
+        Me.MenuBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MenuBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FoodBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FoodTableAdapter = New RMS_Project.menuTableAdapters.foodTableAdapter()
+        Me.FoodidDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FoodnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FoodpriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Table = New RMS_Project.table()
+        Me.TableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TableTableAdapter = New RMS_Project.tableTableAdapters.TableTableAdapter()
+        Me.Table1 = New RMS_Project.table()
+        Me.TableBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Menu, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MenuBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MenuBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Table, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Table1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TableBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -44,11 +71,14 @@ Partial Class Form3
         '
         'DataGridView1
         '
+        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FoodidDataGridViewTextBoxColumn, Me.FoodnameDataGridViewTextBoxColumn, Me.FoodpriceDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.FoodBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(321, 138)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(240, 342)
+        Me.DataGridView1.Size = New System.Drawing.Size(345, 342)
         Me.DataGridView1.TabIndex = 1
         '
         'Label2
@@ -73,14 +103,6 @@ Partial Class Form3
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "เลือกโต๊ะอาหาร"
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(48, 151)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(183, 24)
-        Me.ComboBox1.TabIndex = 4
-        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Yellow
@@ -91,6 +113,98 @@ Partial Class Form3
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "สั่งอาหาร"
         Me.Button1.UseVisualStyleBackColor = False
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DataTable1BindingSource
+        '
+        Me.DataTable1BindingSource.DataMember = "DataTable1"
+        Me.DataTable1BindingSource.DataSource = Me.DataSet1
+        '
+        'DataTable1TableAdapter
+        '
+        Me.DataTable1TableAdapter.ClearBeforeFill = True
+        '
+        'Menu
+        '
+        Me.Menu.DataSetName = "menu"
+        Me.Menu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MenuBindingSource
+        '
+        Me.MenuBindingSource.DataSource = Me.Menu
+        Me.MenuBindingSource.Position = 0
+        '
+        'MenuBindingSource1
+        '
+        Me.MenuBindingSource1.DataSource = Me.Menu
+        Me.MenuBindingSource1.Position = 0
+        '
+        'FoodBindingSource
+        '
+        Me.FoodBindingSource.DataMember = "food"
+        Me.FoodBindingSource.DataSource = Me.Menu
+        '
+        'FoodTableAdapter
+        '
+        Me.FoodTableAdapter.ClearBeforeFill = True
+        '
+        'FoodidDataGridViewTextBoxColumn
+        '
+        Me.FoodidDataGridViewTextBoxColumn.DataPropertyName = "food_id"
+        Me.FoodidDataGridViewTextBoxColumn.HeaderText = "food_id"
+        Me.FoodidDataGridViewTextBoxColumn.Name = "FoodidDataGridViewTextBoxColumn"
+        '
+        'FoodnameDataGridViewTextBoxColumn
+        '
+        Me.FoodnameDataGridViewTextBoxColumn.DataPropertyName = "food_name"
+        Me.FoodnameDataGridViewTextBoxColumn.HeaderText = "food_name"
+        Me.FoodnameDataGridViewTextBoxColumn.Name = "FoodnameDataGridViewTextBoxColumn"
+        '
+        'FoodpriceDataGridViewTextBoxColumn
+        '
+        Me.FoodpriceDataGridViewTextBoxColumn.DataPropertyName = "food_price"
+        Me.FoodpriceDataGridViewTextBoxColumn.HeaderText = "food_price"
+        Me.FoodpriceDataGridViewTextBoxColumn.Name = "FoodpriceDataGridViewTextBoxColumn"
+        '
+        'Table
+        '
+        Me.Table.DataSetName = "table"
+        Me.Table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TableBindingSource
+        '
+        Me.TableBindingSource.DataMember = "Table"
+        Me.TableBindingSource.DataSource = Me.Table
+        '
+        'TableTableAdapter
+        '
+        Me.TableTableAdapter.ClearBeforeFill = True
+        '
+        'Table1
+        '
+        Me.Table1.DataSetName = "table"
+        Me.Table1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TableBindingSource1
+        '
+        Me.TableBindingSource1.DataMember = "Table"
+        Me.TableBindingSource1.DataSource = Me.Table1
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.TableBindingSource, "table_number", True))
+        Me.ComboBox1.DataSource = Me.TableBindingSource1
+        Me.ComboBox1.DisplayMember = "table_number"
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(48, 151)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(183, 24)
+        Me.ComboBox1.TabIndex = 4
+        Me.ComboBox1.ValueMember = "table_number"
         '
         'Form3
         '
@@ -107,6 +221,16 @@ Partial Class Form3
         Me.Name = "Form3"
         Me.Text = "Form3"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Menu, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MenuBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MenuBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Table, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Table1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TableBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -116,6 +240,22 @@ Partial Class Form3
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents DataSet1 As DataSet1
+    Friend WithEvents DataTable1BindingSource As BindingSource
+    Friend WithEvents DataTable1TableAdapter As DataSet1TableAdapters.DataTable1TableAdapter
+    Friend WithEvents MenuBindingSource1 As BindingSource
+    Friend WithEvents Menu As menu
+    Friend WithEvents MenuBindingSource As BindingSource
+    Friend WithEvents FoodBindingSource As BindingSource
+    Friend WithEvents FoodTableAdapter As menuTableAdapters.foodTableAdapter
+    Friend WithEvents FoodidDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FoodnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FoodpriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Table As table
+    Friend WithEvents TableBindingSource As BindingSource
+    Friend WithEvents TableTableAdapter As tableTableAdapters.TableTableAdapter
+    Friend WithEvents Table1 As table
+    Friend WithEvents TableBindingSource1 As BindingSource
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
