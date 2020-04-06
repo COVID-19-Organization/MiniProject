@@ -24,11 +24,6 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnTableC5 = New System.Windows.Forms.Button()
-        Me.btnTableC4 = New System.Windows.Forms.Button()
-        Me.btnTableC3 = New System.Windows.Forms.Button()
-        Me.btnTableC2 = New System.Windows.Forms.Button()
-        Me.btnTableC1 = New System.Windows.Forms.Button()
         Me.btnTableB5 = New System.Windows.Forms.Button()
         Me.btnTableB4 = New System.Windows.Forms.Button()
         Me.btnTableB3 = New System.Windows.Forms.Button()
@@ -60,11 +55,6 @@ Partial Class Form1
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.btnTableC5)
-        Me.GroupBox1.Controls.Add(Me.btnTableC4)
-        Me.GroupBox1.Controls.Add(Me.btnTableC3)
-        Me.GroupBox1.Controls.Add(Me.btnTableC2)
-        Me.GroupBox1.Controls.Add(Me.btnTableC1)
         Me.GroupBox1.Controls.Add(Me.btnTableB5)
         Me.GroupBox1.Controls.Add(Me.btnTableB4)
         Me.GroupBox1.Controls.Add(Me.btnTableB3)
@@ -78,55 +68,10 @@ Partial Class Form1
         Me.GroupBox1.Font = New System.Drawing.Font("TH SarabunPSK", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(25, 95)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(462, 211)
+        Me.GroupBox1.Size = New System.Drawing.Size(462, 169)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "แผนผังโต๊ะ"
-        '
-        'btnTableC5
-        '
-        Me.btnTableC5.Location = New System.Drawing.Point(370, 149)
-        Me.btnTableC5.Name = "btnTableC5"
-        Me.btnTableC5.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableC5.TabIndex = 14
-        Me.btnTableC5.Text = "C5"
-        Me.btnTableC5.UseVisualStyleBackColor = True
-        '
-        'btnTableC4
-        '
-        Me.btnTableC4.Location = New System.Drawing.Point(279, 149)
-        Me.btnTableC4.Name = "btnTableC4"
-        Me.btnTableC4.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableC4.TabIndex = 13
-        Me.btnTableC4.Text = "C4"
-        Me.btnTableC4.UseVisualStyleBackColor = True
-        '
-        'btnTableC3
-        '
-        Me.btnTableC3.Location = New System.Drawing.Point(188, 149)
-        Me.btnTableC3.Name = "btnTableC3"
-        Me.btnTableC3.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableC3.TabIndex = 12
-        Me.btnTableC3.Text = "C3"
-        Me.btnTableC3.UseVisualStyleBackColor = True
-        '
-        'btnTableC2
-        '
-        Me.btnTableC2.Location = New System.Drawing.Point(97, 149)
-        Me.btnTableC2.Name = "btnTableC2"
-        Me.btnTableC2.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableC2.TabIndex = 11
-        Me.btnTableC2.Text = "C2"
-        Me.btnTableC2.UseVisualStyleBackColor = True
-        '
-        'btnTableC1
-        '
-        Me.btnTableC1.Location = New System.Drawing.Point(6, 149)
-        Me.btnTableC1.Name = "btnTableC1"
-        Me.btnTableC1.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableC1.TabIndex = 10
-        Me.btnTableC1.Text = "C1"
-        Me.btnTableC1.UseVisualStyleBackColor = True
         '
         'btnTableB5
         '
@@ -227,7 +172,7 @@ Partial Class Form1
         Me.GroupBox2.Font = New System.Drawing.Font("TH SarabunPSK", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(493, 95)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(251, 211)
+        Me.GroupBox2.Size = New System.Drawing.Size(251, 169)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "สถานะโต๊ะ"
@@ -235,7 +180,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(135, 127)
+        Me.Label3.Location = New System.Drawing.Point(131, 101)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(82, 36)
         Me.Label3.TabIndex = 3
@@ -243,7 +188,7 @@ Partial Class Form1
         '
         'disTableEmpty
         '
-        Me.disTableEmpty.Location = New System.Drawing.Point(35, 121)
+        Me.disTableEmpty.Location = New System.Drawing.Point(31, 95)
         Me.disTableEmpty.Name = "disTableEmpty"
         Me.disTableEmpty.Size = New System.Drawing.Size(94, 48)
         Me.disTableEmpty.TabIndex = 2
@@ -252,7 +197,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(135, 73)
+        Me.Label2.Location = New System.Drawing.Point(131, 47)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(102, 36)
         Me.Label2.TabIndex = 1
@@ -260,7 +205,7 @@ Partial Class Form1
         '
         'disTableFull
         '
-        Me.disTableFull.Location = New System.Drawing.Point(35, 67)
+        Me.disTableFull.Location = New System.Drawing.Point(31, 41)
         Me.disTableFull.Name = "disTableFull"
         Me.disTableFull.Size = New System.Drawing.Size(94, 48)
         Me.disTableFull.TabIndex = 0
@@ -287,11 +232,6 @@ Partial Class Form1
 
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents btnTableC5 As Button
-    Friend WithEvents btnTableC4 As Button
-    Friend WithEvents btnTableC3 As Button
-    Friend WithEvents btnTableC2 As Button
-    Friend WithEvents btnTableC1 As Button
     Friend WithEvents btnTableB5 As Button
     Friend WithEvents btnTableB4 As Button
     Friend WithEvents btnTableB3 As Button
