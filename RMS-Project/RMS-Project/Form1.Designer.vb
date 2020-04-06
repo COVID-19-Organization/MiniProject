@@ -24,26 +24,26 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnTableA1 = New System.Windows.Forms.Button()
-        Me.btnTableA2 = New System.Windows.Forms.Button()
-        Me.btnTableA3 = New System.Windows.Forms.Button()
-        Me.btnTableA4 = New System.Windows.Forms.Button()
-        Me.btnTableA5 = New System.Windows.Forms.Button()
-        Me.btnTableB1 = New System.Windows.Forms.Button()
-        Me.btnTableB2 = New System.Windows.Forms.Button()
-        Me.btnTableB3 = New System.Windows.Forms.Button()
-        Me.btnTableB4 = New System.Windows.Forms.Button()
-        Me.btnTableB5 = New System.Windows.Forms.Button()
-        Me.btnTableC1 = New System.Windows.Forms.Button()
-        Me.btnTableC2 = New System.Windows.Forms.Button()
-        Me.btnTableC3 = New System.Windows.Forms.Button()
-        Me.btnTableC4 = New System.Windows.Forms.Button()
         Me.btnTableC5 = New System.Windows.Forms.Button()
+        Me.btnTableC4 = New System.Windows.Forms.Button()
+        Me.btnTableC3 = New System.Windows.Forms.Button()
+        Me.btnTableC2 = New System.Windows.Forms.Button()
+        Me.btnTableC1 = New System.Windows.Forms.Button()
+        Me.btnTableB5 = New System.Windows.Forms.Button()
+        Me.btnTableB4 = New System.Windows.Forms.Button()
+        Me.btnTableB3 = New System.Windows.Forms.Button()
+        Me.btnTableB2 = New System.Windows.Forms.Button()
+        Me.btnTableB1 = New System.Windows.Forms.Button()
+        Me.btnTableA5 = New System.Windows.Forms.Button()
+        Me.btnTableA4 = New System.Windows.Forms.Button()
+        Me.btnTableA3 = New System.Windows.Forms.Button()
+        Me.btnTableA2 = New System.Windows.Forms.Button()
+        Me.btnTableA1 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.disTableFull = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.disTableEmpty = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.disTableEmpty = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.disTableFull = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -83,122 +83,14 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "แผนผังโต๊ะ"
         '
-        'btnTableA1
+        'btnTableC5
         '
-        Me.btnTableA1.Location = New System.Drawing.Point(6, 41)
-        Me.btnTableA1.Name = "btnTableA1"
-        Me.btnTableA1.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableA1.TabIndex = 0
-        Me.btnTableA1.Text = "A1"
-        Me.btnTableA1.UseVisualStyleBackColor = True
-        '
-        'btnTableA2
-        '
-        Me.btnTableA2.Location = New System.Drawing.Point(97, 41)
-        Me.btnTableA2.Name = "btnTableA2"
-        Me.btnTableA2.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableA2.TabIndex = 1
-        Me.btnTableA2.Text = "A2"
-        Me.btnTableA2.UseVisualStyleBackColor = True
-        '
-        'btnTableA3
-        '
-        Me.btnTableA3.Location = New System.Drawing.Point(188, 41)
-        Me.btnTableA3.Name = "btnTableA3"
-        Me.btnTableA3.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableA3.TabIndex = 2
-        Me.btnTableA3.Text = "A3"
-        Me.btnTableA3.UseVisualStyleBackColor = True
-        '
-        'btnTableA4
-        '
-        Me.btnTableA4.Location = New System.Drawing.Point(279, 41)
-        Me.btnTableA4.Name = "btnTableA4"
-        Me.btnTableA4.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableA4.TabIndex = 3
-        Me.btnTableA4.Text = "A4"
-        Me.btnTableA4.UseVisualStyleBackColor = True
-        '
-        'btnTableA5
-        '
-        Me.btnTableA5.Location = New System.Drawing.Point(370, 41)
-        Me.btnTableA5.Name = "btnTableA5"
-        Me.btnTableA5.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableA5.TabIndex = 4
-        Me.btnTableA5.Text = "A5"
-        Me.btnTableA5.UseVisualStyleBackColor = True
-        '
-        'btnTableB1
-        '
-        Me.btnTableB1.Location = New System.Drawing.Point(6, 95)
-        Me.btnTableB1.Name = "btnTableB1"
-        Me.btnTableB1.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableB1.TabIndex = 5
-        Me.btnTableB1.Text = "B1"
-        Me.btnTableB1.UseVisualStyleBackColor = True
-        '
-        'btnTableB2
-        '
-        Me.btnTableB2.Location = New System.Drawing.Point(97, 95)
-        Me.btnTableB2.Name = "btnTableB2"
-        Me.btnTableB2.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableB2.TabIndex = 6
-        Me.btnTableB2.Text = "B2"
-        Me.btnTableB2.UseVisualStyleBackColor = True
-        '
-        'btnTableB3
-        '
-        Me.btnTableB3.Location = New System.Drawing.Point(188, 95)
-        Me.btnTableB3.Name = "btnTableB3"
-        Me.btnTableB3.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableB3.TabIndex = 7
-        Me.btnTableB3.Text = "B3"
-        Me.btnTableB3.UseVisualStyleBackColor = True
-        '
-        'btnTableB4
-        '
-        Me.btnTableB4.Location = New System.Drawing.Point(279, 95)
-        Me.btnTableB4.Name = "btnTableB4"
-        Me.btnTableB4.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableB4.TabIndex = 8
-        Me.btnTableB4.Text = "B4"
-        Me.btnTableB4.UseVisualStyleBackColor = True
-        '
-        'btnTableB5
-        '
-        Me.btnTableB5.Location = New System.Drawing.Point(370, 95)
-        Me.btnTableB5.Name = "btnTableB5"
-        Me.btnTableB5.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableB5.TabIndex = 9
-        Me.btnTableB5.Text = "B5"
-        Me.btnTableB5.UseVisualStyleBackColor = True
-        '
-        'btnTableC1
-        '
-        Me.btnTableC1.Location = New System.Drawing.Point(6, 149)
-        Me.btnTableC1.Name = "btnTableC1"
-        Me.btnTableC1.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableC1.TabIndex = 10
-        Me.btnTableC1.Text = "C1"
-        Me.btnTableC1.UseVisualStyleBackColor = True
-        '
-        'btnTableC2
-        '
-        Me.btnTableC2.Location = New System.Drawing.Point(97, 149)
-        Me.btnTableC2.Name = "btnTableC2"
-        Me.btnTableC2.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableC2.TabIndex = 11
-        Me.btnTableC2.Text = "C2"
-        Me.btnTableC2.UseVisualStyleBackColor = True
-        '
-        'btnTableC3
-        '
-        Me.btnTableC3.Location = New System.Drawing.Point(188, 149)
-        Me.btnTableC3.Name = "btnTableC3"
-        Me.btnTableC3.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableC3.TabIndex = 12
-        Me.btnTableC3.Text = "C3"
-        Me.btnTableC3.UseVisualStyleBackColor = True
+        Me.btnTableC5.Location = New System.Drawing.Point(370, 149)
+        Me.btnTableC5.Name = "btnTableC5"
+        Me.btnTableC5.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableC5.TabIndex = 14
+        Me.btnTableC5.Text = "C5"
+        Me.btnTableC5.UseVisualStyleBackColor = True
         '
         'btnTableC4
         '
@@ -209,14 +101,122 @@ Partial Class Form1
         Me.btnTableC4.Text = "C4"
         Me.btnTableC4.UseVisualStyleBackColor = True
         '
-        'btnTableC5
+        'btnTableC3
         '
-        Me.btnTableC5.Location = New System.Drawing.Point(370, 149)
-        Me.btnTableC5.Name = "btnTableC5"
-        Me.btnTableC5.Size = New System.Drawing.Size(85, 48)
-        Me.btnTableC5.TabIndex = 14
-        Me.btnTableC5.Text = "C5"
-        Me.btnTableC5.UseVisualStyleBackColor = True
+        Me.btnTableC3.Location = New System.Drawing.Point(188, 149)
+        Me.btnTableC3.Name = "btnTableC3"
+        Me.btnTableC3.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableC3.TabIndex = 12
+        Me.btnTableC3.Text = "C3"
+        Me.btnTableC3.UseVisualStyleBackColor = True
+        '
+        'btnTableC2
+        '
+        Me.btnTableC2.Location = New System.Drawing.Point(97, 149)
+        Me.btnTableC2.Name = "btnTableC2"
+        Me.btnTableC2.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableC2.TabIndex = 11
+        Me.btnTableC2.Text = "C2"
+        Me.btnTableC2.UseVisualStyleBackColor = True
+        '
+        'btnTableC1
+        '
+        Me.btnTableC1.Location = New System.Drawing.Point(6, 149)
+        Me.btnTableC1.Name = "btnTableC1"
+        Me.btnTableC1.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableC1.TabIndex = 10
+        Me.btnTableC1.Text = "C1"
+        Me.btnTableC1.UseVisualStyleBackColor = True
+        '
+        'btnTableB5
+        '
+        Me.btnTableB5.Location = New System.Drawing.Point(370, 95)
+        Me.btnTableB5.Name = "btnTableB5"
+        Me.btnTableB5.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableB5.TabIndex = 9
+        Me.btnTableB5.Text = "B5"
+        Me.btnTableB5.UseVisualStyleBackColor = True
+        '
+        'btnTableB4
+        '
+        Me.btnTableB4.Location = New System.Drawing.Point(279, 95)
+        Me.btnTableB4.Name = "btnTableB4"
+        Me.btnTableB4.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableB4.TabIndex = 8
+        Me.btnTableB4.Text = "B4"
+        Me.btnTableB4.UseVisualStyleBackColor = True
+        '
+        'btnTableB3
+        '
+        Me.btnTableB3.Location = New System.Drawing.Point(188, 95)
+        Me.btnTableB3.Name = "btnTableB3"
+        Me.btnTableB3.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableB3.TabIndex = 7
+        Me.btnTableB3.Text = "B3"
+        Me.btnTableB3.UseVisualStyleBackColor = True
+        '
+        'btnTableB2
+        '
+        Me.btnTableB2.Location = New System.Drawing.Point(97, 95)
+        Me.btnTableB2.Name = "btnTableB2"
+        Me.btnTableB2.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableB2.TabIndex = 6
+        Me.btnTableB2.Text = "B2"
+        Me.btnTableB2.UseVisualStyleBackColor = True
+        '
+        'btnTableB1
+        '
+        Me.btnTableB1.Location = New System.Drawing.Point(6, 95)
+        Me.btnTableB1.Name = "btnTableB1"
+        Me.btnTableB1.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableB1.TabIndex = 5
+        Me.btnTableB1.Text = "B1"
+        Me.btnTableB1.UseVisualStyleBackColor = True
+        '
+        'btnTableA5
+        '
+        Me.btnTableA5.Location = New System.Drawing.Point(370, 41)
+        Me.btnTableA5.Name = "btnTableA5"
+        Me.btnTableA5.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableA5.TabIndex = 4
+        Me.btnTableA5.Text = "A5"
+        Me.btnTableA5.UseVisualStyleBackColor = True
+        '
+        'btnTableA4
+        '
+        Me.btnTableA4.Location = New System.Drawing.Point(279, 41)
+        Me.btnTableA4.Name = "btnTableA4"
+        Me.btnTableA4.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableA4.TabIndex = 3
+        Me.btnTableA4.Text = "A4"
+        Me.btnTableA4.UseVisualStyleBackColor = True
+        '
+        'btnTableA3
+        '
+        Me.btnTableA3.Location = New System.Drawing.Point(188, 41)
+        Me.btnTableA3.Name = "btnTableA3"
+        Me.btnTableA3.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableA3.TabIndex = 2
+        Me.btnTableA3.Text = "A3"
+        Me.btnTableA3.UseVisualStyleBackColor = True
+        '
+        'btnTableA2
+        '
+        Me.btnTableA2.Location = New System.Drawing.Point(97, 41)
+        Me.btnTableA2.Name = "btnTableA2"
+        Me.btnTableA2.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableA2.TabIndex = 1
+        Me.btnTableA2.Text = "A2"
+        Me.btnTableA2.UseVisualStyleBackColor = True
+        '
+        'btnTableA1
+        '
+        Me.btnTableA1.Location = New System.Drawing.Point(6, 41)
+        Me.btnTableA1.Name = "btnTableA1"
+        Me.btnTableA1.Size = New System.Drawing.Size(85, 48)
+        Me.btnTableA1.TabIndex = 0
+        Me.btnTableA1.Text = "A1"
+        Me.btnTableA1.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
@@ -230,15 +230,24 @@ Partial Class Form1
         Me.GroupBox2.Size = New System.Drawing.Size(251, 211)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
+        Me.GroupBox2.Text = "สถานะโต๊ะ"
         '
-        'disTableFull
+        'Label3
         '
-        Me.disTableFull.Location = New System.Drawing.Point(35, 67)
-        Me.disTableFull.Name = "disTableFull"
-        Me.disTableFull.Size = New System.Drawing.Size(94, 48)
-        Me.disTableFull.TabIndex = 0
-        Me.disTableFull.UseVisualStyleBackColor = True
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(135, 127)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(82, 36)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "โต๊ะที่ว่าง"
+        '
+        'disTableEmpty
+        '
+        Me.disTableEmpty.Location = New System.Drawing.Point(35, 121)
+        Me.disTableEmpty.Name = "disTableEmpty"
+        Me.disTableEmpty.Size = New System.Drawing.Size(94, 48)
+        Me.disTableEmpty.TabIndex = 2
+        Me.disTableEmpty.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -249,22 +258,13 @@ Partial Class Form1
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "โต๊ะที่ใช้งาน"
         '
-        'disTableEmpty
+        'disTableFull
         '
-        Me.disTableEmpty.Location = New System.Drawing.Point(35, 121)
-        Me.disTableEmpty.Name = "disTableEmpty"
-        Me.disTableEmpty.Size = New System.Drawing.Size(94, 48)
-        Me.disTableEmpty.TabIndex = 2
-        Me.disTableEmpty.UseVisualStyleBackColor = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(135, 127)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(82, 36)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "โต๊ะที่ว่าง"
+        Me.disTableFull.Location = New System.Drawing.Point(35, 67)
+        Me.disTableFull.Name = "disTableFull"
+        Me.disTableFull.Size = New System.Drawing.Size(94, 48)
+        Me.disTableFull.TabIndex = 0
+        Me.disTableFull.UseVisualStyleBackColor = True
         '
         'Form1
         '
