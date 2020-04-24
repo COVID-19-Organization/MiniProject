@@ -20,9 +20,9 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("DataSet2"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("menu"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class DataSet2
+Partial Public Class menu
     Inherits Global.System.Data.DataSet
     
     Private tablefood As foodDataTable
@@ -128,7 +128,7 @@ Partial Public Class DataSet2
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As DataSet2 = CType(MyBase.Clone,DataSet2)
+        Dim cln As menu = CType(MyBase.Clone,menu)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -199,9 +199,9 @@ Partial Public Class DataSet2
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "DataSet2"
+        Me.DataSetName = "menu"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/DataSet2.xsd"
+        Me.Namespace = "http://tempuri.org/menu.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tablefood = New foodDataTable()
@@ -225,7 +225,7 @@ Partial Public Class DataSet2
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As DataSet2 = New DataSet2()
+        Dim ds As menu = New menu()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -283,10 +283,6 @@ Partial Public Class DataSet2
     Partial Public Class foodDataTable
         Inherits Global.System.Data.TypedTableBase(Of foodRow)
         
-        Private columnExpr1 As Global.System.Data.DataColumn
-        
-        Private columnExpr2 As Global.System.Data.DataColumn
-        
         Private columnfood_id As Global.System.Data.DataColumn
         
         Private columnfood_name As Global.System.Data.DataColumn
@@ -327,22 +323,6 @@ Partial Public Class DataSet2
             MyBase.New(info, context)
             Me.InitVars
         End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property Expr1Column() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnExpr1
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property Expr2Column() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnExpr2
-            End Get
-        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -405,9 +385,9 @@ Partial Public Class DataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddfoodRow(ByVal Expr1 As Integer, ByVal Expr2 As String, ByVal food_id As Integer, ByVal food_name As String, ByVal food_price As Integer) As foodRow
+        Public Overloads Function AddfoodRow(ByVal food_id As Integer, ByVal food_name As String, ByVal food_price As Integer) As foodRow
             Dim rowfoodRow As foodRow = CType(Me.NewRow,foodRow)
-            Dim columnValuesArray() As Object = New Object() {Expr1, Expr2, food_id, food_name, food_price}
+            Dim columnValuesArray() As Object = New Object() {food_id, food_name, food_price}
             rowfoodRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowfoodRow)
             Return rowfoodRow
@@ -415,8 +395,8 @@ Partial Public Class DataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function FindByExpr1food_id(ByVal Expr1 As Integer, ByVal food_id As Integer) As foodRow
-            Return CType(Me.Rows.Find(New Object() {Expr1, food_id}),foodRow)
+        Public Function FindByfood_id(ByVal food_id As Integer) As foodRow
+            Return CType(Me.Rows.Find(New Object() {food_id}),foodRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -436,8 +416,6 @@ Partial Public Class DataSet2
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnExpr1 = MyBase.Columns("Expr1")
-            Me.columnExpr2 = MyBase.Columns("Expr2")
             Me.columnfood_id = MyBase.Columns("food_id")
             Me.columnfood_name = MyBase.Columns("food_name")
             Me.columnfood_price = MyBase.Columns("food_price")
@@ -446,20 +424,15 @@ Partial Public Class DataSet2
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnExpr1 = New Global.System.Data.DataColumn("Expr1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnExpr1)
-            Me.columnExpr2 = New Global.System.Data.DataColumn("Expr2", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnExpr2)
             Me.columnfood_id = New Global.System.Data.DataColumn("food_id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnfood_id)
             Me.columnfood_name = New Global.System.Data.DataColumn("food_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnfood_name)
             Me.columnfood_price = New Global.System.Data.DataColumn("food_price", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnfood_price)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnExpr1, Me.columnfood_id}, true))
-            Me.columnExpr1.AllowDBNull = false
-            Me.columnExpr2.MaxLength = 50
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnfood_id}, true))
             Me.columnfood_id.AllowDBNull = false
+            Me.columnfood_id.Unique = true
             Me.columnfood_name.MaxLength = 50
         End Sub
         
@@ -528,7 +501,7 @@ Partial Public Class DataSet2
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As DataSet2 = New DataSet2()
+            Dim ds As menu = New menu()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -607,32 +580,6 @@ Partial Public Class DataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property Expr1() As Integer
-            Get
-                Return CType(Me(Me.tablefood.Expr1Column),Integer)
-            End Get
-            Set
-                Me(Me.tablefood.Expr1Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property Expr2() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablefood.Expr2Column),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Expr2' in table 'food' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablefood.Expr2Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property food_id() As Integer
             Get
                 Return CType(Me(Me.tablefood.food_idColumn),Integer)
@@ -671,18 +618,6 @@ Partial Public Class DataSet2
                 Me(Me.tablefood.food_priceColumn) = value
             End Set
         End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsExpr2Null() As Boolean
-            Return Me.IsNull(Me.tablefood.Expr2Column)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetExpr2Null()
-            Me(Me.tablefood.Expr2Column) = Global.System.Convert.DBNull
-        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -746,7 +681,7 @@ Partial Public Class DataSet2
     End Class
 End Class
 
-Namespace DataSet2TableAdapters
+Namespace menuTableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -875,23 +810,17 @@ Namespace DataSet2TableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "food"
-            tableMapping.ColumnMappings.Add("Expr1", "Expr1")
-            tableMapping.ColumnMappings.Add("Expr2", "Expr2")
             tableMapping.ColumnMappings.Add("food_id", "food_id")
             tableMapping.ColumnMappings.Add("food_name", "food_name")
             tableMapping.ColumnMappings.Add("food_price", "food_price")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [food] WHERE (([food_id] = @Original_Expr1) AND ((@IsNull_Expr2 = 1 A"& _ 
-                "ND [food_name] IS NULL) OR ([food_name] = @Original_Expr2)) AND ([food_id] = @Or"& _ 
-                "iginal_food_id) AND ((@IsNull_food_name = 1 AND [food_name] IS NULL) OR ([food_n"& _ 
-                "ame] = @Original_food_name)) AND ((@IsNull_food_price = 1 AND [food_price] IS NU"& _ 
-                "LL) OR ([food_price] = @Original_food_price)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [food] WHERE (([food_id] = @Original_food_id) AND ((@IsNull_food_name"& _ 
+                " = 1 AND [food_name] IS NULL) OR ([food_name] = @Original_food_name)) AND ((@IsN"& _ 
+                "ull_food_price = 1 AND [food_price] IS NULL) OR ([food_price] = @Original_food_p"& _ 
+                "rice)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Expr1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Expr1", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Expr2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Expr2", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Expr2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Expr2", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_food_id", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "food_id", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_food_name", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "food_name", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_food_name", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "food_name", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -899,35 +828,24 @@ Namespace DataSet2TableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_food_price", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "food_price", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [food] ([food_id], [food_name], [food_id], [food_name], [food_price])"& _ 
-                " VALUES (@Expr1, @Expr2, @food_id, @food_name, @food_price);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT food_id AS "& _ 
-                "Expr1, food_name AS Expr2, food_id, food_name, food_price FROM food WHERE (food_"& _ 
-                "id = @food_id) AND (food_id = @food_id)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [food] ([food_id], [food_name], [food_price]) VALUES (@food_id, @food"& _ 
+                "_name, @food_price);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT food_id, food_name, food_price FROM food WHERE (foo"& _ 
+                "d_id = @food_id)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Expr1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Expr1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Expr2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Expr2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@food_id", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "food_id", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@food_name", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "food_name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@food_price", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "food_price", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [food] SET [food_id] = @Expr1, [food_name] = @Expr2, [food_id] = @food_id,"& _ 
-                " [food_name] = @food_name, [food_price] = @food_price WHERE (([food_id] = @Origi"& _ 
-                "nal_Expr1) AND ((@IsNull_Expr2 = 1 AND [food_name] IS NULL) OR ([food_name] = @O"& _ 
-                "riginal_Expr2)) AND ([food_id] = @Original_food_id) AND ((@IsNull_food_name = 1 "& _ 
-                "AND [food_name] IS NULL) OR ([food_name] = @Original_food_name)) AND ((@IsNull_f"& _ 
-                "ood_price = 1 AND [food_price] IS NULL) OR ([food_price] = @Original_food_price)"& _ 
-                "));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT food_id AS Expr1, food_name AS Expr2, food_id, food_name, food_price"& _ 
-                " FROM food WHERE (food_id = @food_id) AND (food_id = @food_id)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [food] SET [food_id] = @food_id, [food_name] = @food_name, [food_price] = "& _ 
+                "@food_price WHERE (([food_id] = @Original_food_id) AND ((@IsNull_food_name = 1 A"& _ 
+                "ND [food_name] IS NULL) OR ([food_name] = @Original_food_name)) AND ((@IsNull_fo"& _ 
+                "od_price = 1 AND [food_price] IS NULL) OR ([food_price] = @Original_food_price))"& _ 
+                ");"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT food_id, food_name, food_price FROM food WHERE (food_id = @food_id)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Expr1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Expr1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Expr2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Expr2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@food_id", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "food_id", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@food_name", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "food_name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@food_price", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "food_price", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Expr1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Expr1", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Expr2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Expr2", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Expr2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Expr2", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_food_id", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "food_id", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_food_name", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "food_name", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_food_name", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "food_name", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -948,7 +866,7 @@ Namespace DataSet2TableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT     food_id AS Expr1, food_name AS Expr2, food.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM        food"
+            Me._commandCollection(0).CommandText = "SELECT     food.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM        food"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -956,7 +874,7 @@ Namespace DataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As DataSet2.foodDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As menu.foodDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -969,9 +887,9 @@ Namespace DataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As DataSet2.foodDataTable
+        Public Overloads Overridable Function GetData() As menu.foodDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As DataSet2.foodDataTable = New DataSet2.foodDataTable()
+            Dim dataTable As menu.foodDataTable = New menu.foodDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -979,14 +897,14 @@ Namespace DataSet2TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As DataSet2.foodDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As menu.foodDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As DataSet2) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As menu) As Integer
             Return Me.Adapter.Update(dataSet, "food")
         End Function
         
@@ -1008,28 +926,21 @@ Namespace DataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Expr1 As Integer, ByVal Original_Expr2 As String, ByVal Original_food_id As Integer, ByVal Original_food_name As String, ByVal Original_food_price As Global.System.Nullable(Of Integer)) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Expr1,Integer)
-            If (Original_Expr2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Expr2")
+        Public Overloads Overridable Function Delete(ByVal Original_food_id As Integer, ByVal Original_food_name As String, ByVal Original_food_price As Global.System.Nullable(Of Integer)) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_food_id,Integer)
+            If (Original_food_name Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Expr2,String)
-            End If
-            Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_food_id,Integer)
-            If (Original_food_name Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(5).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_food_name,String)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_food_name,String)
             End If
             If (Original_food_price.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_food_price.Value,Integer)
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_food_price.Value,Integer)
             Else
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1050,23 +961,17 @@ Namespace DataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Expr1 As Integer, ByVal Expr2 As String, ByVal food_id As Integer, ByVal food_name As String, ByVal food_price As Global.System.Nullable(Of Integer)) As Integer
-            Me.Adapter.InsertCommand.Parameters(0).Value = CType(Expr1,Integer)
-            If (Expr2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Expr2")
-            Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Expr2,String)
-            End If
-            Me.Adapter.InsertCommand.Parameters(2).Value = CType(food_id,Integer)
+        Public Overloads Overridable Function Insert(ByVal food_id As Integer, ByVal food_name As String, ByVal food_price As Global.System.Nullable(Of Integer)) As Integer
+            Me.Adapter.InsertCommand.Parameters(0).Value = CType(food_id,Integer)
             If (food_name Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(food_name,String)
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(food_name,String)
             End If
             If (food_price.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(food_price.Value,Integer)
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(food_price.Value,Integer)
             Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1087,45 +992,32 @@ Namespace DataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Expr1 As Integer, ByVal Expr2 As String, ByVal food_id As Integer, ByVal food_name As String, ByVal food_price As Global.System.Nullable(Of Integer), ByVal Original_Expr1 As Integer, ByVal Original_Expr2 As String, ByVal Original_food_id As Integer, ByVal Original_food_name As String, ByVal Original_food_price As Global.System.Nullable(Of Integer)) As Integer
-            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Expr1,Integer)
-            If (Expr2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Expr2")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Expr2,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(food_id,Integer)
+        Public Overloads Overridable Function Update(ByVal food_id As Integer, ByVal food_name As String, ByVal food_price As Global.System.Nullable(Of Integer), ByVal Original_food_id As Integer, ByVal Original_food_name As String, ByVal Original_food_price As Global.System.Nullable(Of Integer)) As Integer
+            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(food_id,Integer)
             If (food_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(food_name,String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(food_name,String)
             End If
             If (food_price.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(food_price.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(food_price.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_Expr1,Integer)
-            If (Original_Expr2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Expr2")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_Expr2,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_food_id,Integer)
+            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Original_food_id,Integer)
             If (Original_food_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_food_name,String)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_food_name,String)
             End If
             If (Original_food_price.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_food_price.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_food_price.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1146,8 +1038,8 @@ Namespace DataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Expr2 As String, ByVal food_name As String, ByVal food_price As Global.System.Nullable(Of Integer), ByVal Original_Expr1 As Integer, ByVal Original_Expr2 As String, ByVal Original_food_id As Integer, ByVal Original_food_name As String, ByVal Original_food_price As Global.System.Nullable(Of Integer)) As Integer
-            Return Me.Update(Original_Expr1, Expr2, Original_food_id, food_name, food_price, Original_Expr1, Original_Expr2, Original_food_id, Original_food_name, Original_food_price)
+        Public Overloads Overridable Function Update(ByVal food_name As String, ByVal food_price As Global.System.Nullable(Of Integer), ByVal Original_food_id As Integer, ByVal Original_food_name As String, ByVal Original_food_price As Global.System.Nullable(Of Integer)) As Integer
+            Return Me.Update(Original_food_id, food_name, food_price, Original_food_id, Original_food_name, Original_food_price)
         End Function
     End Class
     
@@ -1243,7 +1135,7 @@ Namespace DataSet2TableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As DataSet2, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As menu, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._foodTableAdapter) Is Nothing) Then
                 Dim updatedRows() As Global.System.Data.DataRow = dataSet.food.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
@@ -1262,7 +1154,7 @@ Namespace DataSet2TableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As DataSet2, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As menu, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._foodTableAdapter) Is Nothing) Then
                 Dim addedRows() As Global.System.Data.DataRow = dataSet.food.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
@@ -1280,7 +1172,7 @@ Namespace DataSet2TableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As DataSet2, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As menu, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._foodTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.food.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
@@ -1324,7 +1216,7 @@ Namespace DataSet2TableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As DataSet2) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As menu) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If
