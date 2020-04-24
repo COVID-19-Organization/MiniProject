@@ -22,25 +22,26 @@ Partial Class Form5
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.incomeID = New System.Windows.Forms.TextBox()
-        Me.incomeName = New System.Windows.Forms.TextBox()
+        Me.inID = New System.Windows.Forms.TextBox()
+        Me.inname = New System.Windows.Forms.TextBox()
         Me.btn1 = New System.Windows.Forms.Button()
-        Me.price = New System.Windows.Forms.TextBox()
+        Me.inprice = New System.Windows.Forms.TextBox()
+        Me.DateTimeIncome = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
-        'incomeID
+        'inID
         '
-        Me.incomeID.Location = New System.Drawing.Point(67, 83)
-        Me.incomeID.Name = "incomeID"
-        Me.incomeID.Size = New System.Drawing.Size(100, 22)
-        Me.incomeID.TabIndex = 2
+        Me.inID.Location = New System.Drawing.Point(67, 58)
+        Me.inID.Name = "inID"
+        Me.inID.Size = New System.Drawing.Size(100, 22)
+        Me.inID.TabIndex = 2
         '
-        'incomeName
+        'inname
         '
-        Me.incomeName.Location = New System.Drawing.Point(67, 135)
-        Me.incomeName.Name = "incomeName"
-        Me.incomeName.Size = New System.Drawing.Size(100, 22)
-        Me.incomeName.TabIndex = 3
+        Me.inname.Location = New System.Drawing.Point(67, 95)
+        Me.inname.Name = "inname"
+        Me.inname.Size = New System.Drawing.Size(100, 22)
+        Me.inname.TabIndex = 3
         '
         'btn1
         '
@@ -51,30 +52,39 @@ Partial Class Form5
         Me.btn1.Text = "Button1"
         Me.btn1.UseVisualStyleBackColor = True
         '
-        'price
+        'inprice
         '
-        Me.price.Location = New System.Drawing.Point(67, 163)
-        Me.price.Name = "price"
-        Me.price.Size = New System.Drawing.Size(100, 22)
-        Me.price.TabIndex = 5
+        Me.inprice.Location = New System.Drawing.Point(67, 133)
+        Me.inprice.Name = "inprice"
+        Me.inprice.Size = New System.Drawing.Size(100, 22)
+        Me.inprice.TabIndex = 5
+        '
+        'DateTimeIncome
+        '
+        Me.DateTimeIncome.Location = New System.Drawing.Point(67, 162)
+        Me.DateTimeIncome.Name = "DateTimeIncome"
+        Me.DateTimeIncome.Size = New System.Drawing.Size(203, 22)
+        Me.DateTimeIncome.TabIndex = 6
         '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1269, 450)
-        Me.Controls.Add(Me.price)
+        Me.Controls.Add(Me.DateTimeIncome)
+        Me.Controls.Add(Me.inprice)
         Me.Controls.Add(Me.btn1)
-        Me.Controls.Add(Me.incomeName)
-        Me.Controls.Add(Me.incomeID)
+        Me.Controls.Add(Me.inname)
+        Me.Controls.Add(Me.inID)
         Me.Name = "Form5"
         Me.Text = "รายรับรายจ่าย"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents incomeID As TextBox
-    Friend WithEvents incomeName As TextBox
+    Friend WithEvents inID As TextBox
+    Friend WithEvents inname As TextBox
     Friend WithEvents btn1 As Button
-    Friend WithEvents price As TextBox
+    Friend WithEvents inprice As TextBox
+    Friend WithEvents DateTimeIncome As DateTimePicker
 End Class

@@ -16,7 +16,7 @@ Public Class Form5
     Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1.Click
         cmd = con.CreateCommand()
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "insert into table1 values('" & incomeID.Text & "','" & incomeName.Text & "','" & price.Text & "')"
+        cmd.CommandText = "insert into income values('" & inID.Text & "','" & inname.Text & "','" & inprice.Text & "','" & DateTimeIncome.Value & "')"
         cmd.ExecuteNonQuery()
 
         MessageBox.Show("Yess")
