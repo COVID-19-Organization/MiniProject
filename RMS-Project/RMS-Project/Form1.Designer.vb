@@ -41,6 +41,7 @@ Partial Class Form1
         Me.disTableFull = New System.Windows.Forms.Button()
         Me.btnOrder = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -70,9 +71,9 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.btnTableA1)
         Me.GroupBox1.Font = New System.Drawing.Font("TH SarabunPSK", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(33, 117)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(616, 208)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
@@ -82,7 +83,7 @@ Partial Class Form1
         '
         Me.btnTableB5.BackColor = System.Drawing.Color.LightGreen
         Me.btnTableB5.Location = New System.Drawing.Point(493, 117)
-        Me.btnTableB5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnTableB5.Margin = New System.Windows.Forms.Padding(4)
         Me.btnTableB5.Name = "btnTableB5"
         Me.btnTableB5.Size = New System.Drawing.Size(113, 59)
         Me.btnTableB5.TabIndex = 9
@@ -93,7 +94,7 @@ Partial Class Form1
         '
         Me.btnTableB4.BackColor = System.Drawing.Color.LightGreen
         Me.btnTableB4.Location = New System.Drawing.Point(372, 117)
-        Me.btnTableB4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnTableB4.Margin = New System.Windows.Forms.Padding(4)
         Me.btnTableB4.Name = "btnTableB4"
         Me.btnTableB4.Size = New System.Drawing.Size(113, 59)
         Me.btnTableB4.TabIndex = 8
@@ -104,7 +105,7 @@ Partial Class Form1
         '
         Me.btnTableB3.BackColor = System.Drawing.Color.LightGreen
         Me.btnTableB3.Location = New System.Drawing.Point(251, 117)
-        Me.btnTableB3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnTableB3.Margin = New System.Windows.Forms.Padding(4)
         Me.btnTableB3.Name = "btnTableB3"
         Me.btnTableB3.Size = New System.Drawing.Size(113, 59)
         Me.btnTableB3.TabIndex = 7
@@ -115,7 +116,7 @@ Partial Class Form1
         '
         Me.btnTableB2.BackColor = System.Drawing.Color.LightGreen
         Me.btnTableB2.Location = New System.Drawing.Point(129, 117)
-        Me.btnTableB2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnTableB2.Margin = New System.Windows.Forms.Padding(4)
         Me.btnTableB2.Name = "btnTableB2"
         Me.btnTableB2.Size = New System.Drawing.Size(113, 59)
         Me.btnTableB2.TabIndex = 6
@@ -126,7 +127,7 @@ Partial Class Form1
         '
         Me.btnTableB1.BackColor = System.Drawing.Color.LightGreen
         Me.btnTableB1.Location = New System.Drawing.Point(8, 117)
-        Me.btnTableB1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnTableB1.Margin = New System.Windows.Forms.Padding(4)
         Me.btnTableB1.Name = "btnTableB1"
         Me.btnTableB1.Size = New System.Drawing.Size(113, 59)
         Me.btnTableB1.TabIndex = 5
@@ -137,7 +138,7 @@ Partial Class Form1
         '
         Me.btnTableA5.BackColor = System.Drawing.Color.LightGreen
         Me.btnTableA5.Location = New System.Drawing.Point(493, 50)
-        Me.btnTableA5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnTableA5.Margin = New System.Windows.Forms.Padding(4)
         Me.btnTableA5.Name = "btnTableA5"
         Me.btnTableA5.Size = New System.Drawing.Size(113, 59)
         Me.btnTableA5.TabIndex = 4
@@ -148,7 +149,7 @@ Partial Class Form1
         '
         Me.btnTableA4.BackColor = System.Drawing.Color.LightGreen
         Me.btnTableA4.Location = New System.Drawing.Point(372, 50)
-        Me.btnTableA4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnTableA4.Margin = New System.Windows.Forms.Padding(4)
         Me.btnTableA4.Name = "btnTableA4"
         Me.btnTableA4.Size = New System.Drawing.Size(113, 59)
         Me.btnTableA4.TabIndex = 3
@@ -159,7 +160,7 @@ Partial Class Form1
         '
         Me.btnTableA3.BackColor = System.Drawing.Color.LightGreen
         Me.btnTableA3.Location = New System.Drawing.Point(251, 50)
-        Me.btnTableA3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnTableA3.Margin = New System.Windows.Forms.Padding(4)
         Me.btnTableA3.Name = "btnTableA3"
         Me.btnTableA3.Size = New System.Drawing.Size(113, 59)
         Me.btnTableA3.TabIndex = 2
@@ -170,7 +171,7 @@ Partial Class Form1
         '
         Me.btnTableA2.BackColor = System.Drawing.Color.LightGreen
         Me.btnTableA2.Location = New System.Drawing.Point(129, 50)
-        Me.btnTableA2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnTableA2.Margin = New System.Windows.Forms.Padding(4)
         Me.btnTableA2.Name = "btnTableA2"
         Me.btnTableA2.Size = New System.Drawing.Size(113, 59)
         Me.btnTableA2.TabIndex = 1
@@ -181,7 +182,7 @@ Partial Class Form1
         '
         Me.btnTableA1.BackColor = System.Drawing.Color.LightGreen
         Me.btnTableA1.Location = New System.Drawing.Point(8, 50)
-        Me.btnTableA1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnTableA1.Margin = New System.Windows.Forms.Padding(4)
         Me.btnTableA1.Name = "btnTableA1"
         Me.btnTableA1.Size = New System.Drawing.Size(113, 59)
         Me.btnTableA1.TabIndex = 0
@@ -196,9 +197,9 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.disTableFull)
         Me.GroupBox2.Font = New System.Drawing.Font("TH SarabunPSK", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(657, 117)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Size = New System.Drawing.Size(335, 208)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
@@ -219,7 +220,7 @@ Partial Class Form1
         Me.disTableEmpty.BackColor = System.Drawing.Color.LightGreen
         Me.disTableEmpty.Enabled = False
         Me.disTableEmpty.Location = New System.Drawing.Point(41, 117)
-        Me.disTableEmpty.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.disTableEmpty.Margin = New System.Windows.Forms.Padding(4)
         Me.disTableEmpty.Name = "disTableEmpty"
         Me.disTableEmpty.Size = New System.Drawing.Size(125, 59)
         Me.disTableEmpty.TabIndex = 2
@@ -240,7 +241,7 @@ Partial Class Form1
         Me.disTableFull.BackColor = System.Drawing.Color.LightCoral
         Me.disTableFull.Enabled = False
         Me.disTableFull.Location = New System.Drawing.Point(41, 50)
-        Me.disTableFull.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.disTableFull.Margin = New System.Windows.Forms.Padding(4)
         Me.disTableFull.Name = "disTableFull"
         Me.disTableFull.Size = New System.Drawing.Size(125, 59)
         Me.disTableFull.TabIndex = 0
@@ -250,7 +251,7 @@ Partial Class Form1
         '
         Me.btnOrder.Font = New System.Drawing.Font("TH SarabunPSK", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnOrder.Location = New System.Drawing.Point(449, 359)
-        Me.btnOrder.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnOrder.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOrder.Name = "btnOrder"
         Me.btnOrder.Size = New System.Drawing.Size(168, 82)
         Me.btnOrder.TabIndex = 3
@@ -268,11 +269,21 @@ Partial Class Form1
         Me.Button1.Text = "สั่งอาหาร"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(217, 401)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 5
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1029, 487)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnOrder)
         Me.Controls.Add(Me.GroupBox2)
@@ -309,4 +320,5 @@ Partial Class Form1
     Friend WithEvents disTableFull As Button
     Friend WithEvents btnOrder As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class
