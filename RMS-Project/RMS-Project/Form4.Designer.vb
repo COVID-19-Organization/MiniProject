@@ -50,7 +50,7 @@ Partial Class Form4
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "RMS_Project.receipt.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(12, 12)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
+
         Me.ReportViewer1.Size = New System.Drawing.Size(865, 452)
         Me.ReportViewer1.TabIndex = 2
         '

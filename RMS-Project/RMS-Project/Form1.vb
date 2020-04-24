@@ -4,7 +4,7 @@
     Dim stableempty As Int64 = 10
 
     Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
-        Form3.Show()
+        b.Show()
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -218,6 +218,6 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Form6.Show()
+        b.Show()
     End Sub
 End Class

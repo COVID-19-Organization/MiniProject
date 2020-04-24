@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form3
+Partial Class b
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -48,6 +48,9 @@ Partial Class Form3
         Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Table1 = New RMS_Project.table()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.emptytable = New System.Windows.Forms.Button()
+        Me.busytable = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -175,7 +178,7 @@ Partial Class Form3
         Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.Button10)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(13, 235)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 286)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
@@ -341,21 +344,57 @@ Partial Class Form3
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(759, 72)
+        Me.TextBox1.Location = New System.Drawing.Point(755, 160)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(235, 41)
         Me.TextBox1.TabIndex = 13
         '
-        'Form3
+        'emptytable
+        '
+        Me.emptytable.BackColor = System.Drawing.Color.LightGreen
+        Me.emptytable.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.emptytable.Location = New System.Drawing.Point(21, 219)
+        Me.emptytable.Margin = New System.Windows.Forms.Padding(4)
+        Me.emptytable.Name = "emptytable"
+        Me.emptytable.Size = New System.Drawing.Size(113, 59)
+        Me.emptytable.TabIndex = 10
+        Me.emptytable.Text = "ว่าง"
+        Me.emptytable.UseVisualStyleBackColor = False
+        '
+        'busytable
+        '
+        Me.busytable.BackColor = System.Drawing.Color.Crimson
+        Me.busytable.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.busytable.Location = New System.Drawing.Point(142, 219)
+        Me.busytable.Margin = New System.Windows.Forms.Padding(4)
+        Me.busytable.Name = "busytable"
+        Me.busytable.Size = New System.Drawing.Size(113, 59)
+        Me.busytable.TabIndex = 14
+        Me.busytable.Text = "ไม่ว่าง"
+        Me.busytable.UseVisualStyleBackColor = False
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(755, 88)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(235, 33)
+        Me.ComboBox1.TabIndex = 15
+        '
+        'b
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(1019, 532)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.busytable)
+        Me.Controls.Add(Me.emptytable)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "Form3"
+        Me.Name = "b"
         Me.Text = "Form3"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
@@ -391,4 +430,7 @@ Partial Class Form3
     Friend WithEvents DataTable1BindingSource As BindingSource
     Friend WithEvents Table1 As table
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents emptytable As Button
+    Friend WithEvents busytable As Button
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
