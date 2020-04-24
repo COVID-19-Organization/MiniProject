@@ -85,7 +85,7 @@ SELECT food_id AS Expr1, food_name AS Expr2, food_id, food_name, food_price FROM
   <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet2" msprop:Generator_UserDSName="DataSet2">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="food" msprop:Generator_TableClassName="foodDataTable" msprop:Generator_TableVarName="tablefood" msprop:Generator_TablePropName="food" msprop:Generator_RowDeletingName="foodRowDeleting" msprop:Generator_RowChangingName="foodRowChanging" msprop:Generator_RowEvHandlerName="foodRowChangeEventHandler" msprop:Generator_RowDeletedName="foodRowDeleted" msprop:Generator_UserTableName="food" msprop:Generator_RowChangedName="foodRowChanged" msprop:Generator_RowEvArgName="foodRowChangeEvent" msprop:Generator_RowClassName="foodRow">
+        <xs:element name="food" msprop:Generator_TableClassName="foodDataTable" msprop:Generator_TableVarName="tablefood" msprop:Generator_RowChangedName="foodRowChanged" msprop:Generator_TablePropName="food" msprop:Generator_RowDeletingName="foodRowDeleting" msprop:Generator_RowChangingName="foodRowChanging" msprop:Generator_RowEvHandlerName="foodRowChangeEventHandler" msprop:Generator_RowDeletedName="foodRowDeleted" msprop:Generator_RowClassName="foodRow" msprop:Generator_UserTableName="food" msprop:Generator_RowEvArgName="foodRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" />
