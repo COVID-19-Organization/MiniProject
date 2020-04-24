@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form3
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form3
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Button6 = New System.Windows.Forms.Button()
@@ -45,22 +45,11 @@ Partial Class Form3
         Me.btnTableA2 = New System.Windows.Forms.Button()
         Me.btnTableA1 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.FoodTableAdapter = New RMS_Project.menuTableAdapters.foodTableAdapter()
-        Me.FoodBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Menu = New RMS_Project.menu()
-        Me.DataTable1BindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Table2 = New RMS_Project.table()
-        Me.DataTable1BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataTable1TableAdapter = New RMS_Project.tableTableAdapters.DataTable1TableAdapter()
         Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Table1 = New RMS_Project.table()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Menu, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataTable1BindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Table2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataTable1BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Table1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -339,39 +328,6 @@ Partial Class Form3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "เลือกโต๊ะอาหาร"
         '
-        'FoodTableAdapter
-        '
-        Me.FoodTableAdapter.ClearBeforeFill = True
-        '
-        'FoodBindingSource
-        '
-        Me.FoodBindingSource.DataMember = "food"
-        Me.FoodBindingSource.DataSource = Me.Menu
-        '
-        'Menu
-        '
-        Me.Menu.DataSetName = "menu"
-        Me.Menu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DataTable1BindingSource2
-        '
-        Me.DataTable1BindingSource2.DataMember = "DataTable1"
-        Me.DataTable1BindingSource2.DataSource = Me.Table2
-        '
-        'Table2
-        '
-        Me.Table2.DataSetName = "table"
-        Me.Table2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DataTable1BindingSource1
-        '
-        Me.DataTable1BindingSource1.DataMember = "DataTable1"
-        Me.DataTable1BindingSource1.DataSource = Me.Table2
-        '
-        'DataTable1TableAdapter
-        '
-        Me.DataTable1TableAdapter.ClearBeforeFill = True
-        '
         'DataTable1BindingSource
         '
         Me.DataTable1BindingSource.DataMember = "DataTable1"
@@ -382,26 +338,31 @@ Partial Class Form3
         Me.Table1.DataSetName = "table"
         Me.Table1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(759, 72)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(235, 41)
+        Me.TextBox1.TabIndex = 13
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(1019, 532)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form3"
         Me.Text = "Form3"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
-        CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Menu, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataTable1BindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Table2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataTable1BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Table1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -427,13 +388,7 @@ Partial Class Form3
     Friend WithEvents btnTableA2 As Button
     Friend WithEvents btnTableA1 As Button
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents FoodTableAdapter As menuTableAdapters.foodTableAdapter
-    Friend WithEvents FoodBindingSource As BindingSource
-    Friend WithEvents Menu As menu
-    Friend WithEvents DataTable1BindingSource2 As BindingSource
-    Friend WithEvents Table2 As table
-    Friend WithEvents DataTable1BindingSource1 As BindingSource
-    Friend WithEvents DataTable1TableAdapter As tableTableAdapters.DataTable1TableAdapter
     Friend WithEvents DataTable1BindingSource As BindingSource
     Friend WithEvents Table1 As table
+    Friend WithEvents TextBox1 As TextBox
 End Class
