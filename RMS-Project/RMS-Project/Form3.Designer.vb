@@ -23,16 +23,17 @@ Partial Class Form3
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Table1 = New RMS_Project.table()
-        Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataTable1TableAdapter = New RMS_Project.tableTableAdapters.DataTable1TableAdapter()
-        Me.Table2 = New RMS_Project.table()
-        Me.DataTable1BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataTable1BindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Menu = New RMS_Project.menu()
-        Me.FoodBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FoodTableAdapter = New RMS_Project.menuTableAdapters.foodTableAdapter()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.btnTableB5 = New System.Windows.Forms.Button()
         Me.btnTableB4 = New System.Windows.Forms.Button()
         Me.btnTableB3 = New System.Windows.Forms.Button()
@@ -43,92 +44,168 @@ Partial Class Form3
         Me.btnTableA3 = New System.Windows.Forms.Button()
         Me.btnTableA2 = New System.Windows.Forms.Button()
         Me.btnTableA1 = New System.Windows.Forms.Button()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        CType(Me.Table1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.FoodTableAdapter = New RMS_Project.menuTableAdapters.foodTableAdapter()
+        Me.FoodBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Menu = New RMS_Project.menu()
+        Me.DataTable1BindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Table2 = New RMS_Project.table()
+        Me.DataTable1BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataTable1TableAdapter = New RMS_Project.tableTableAdapters.DataTable1TableAdapter()
+        Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Table1 = New RMS_Project.table()
+        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Menu, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataTable1BindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Table2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataTable1BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataTable1BindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Menu, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Table1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Table1
+        'Button6
         '
-        Me.Table1.DataSetName = "table"
-        Me.Table1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Button6.BackColor = System.Drawing.Color.LightGreen
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Location = New System.Drawing.Point(129, 150)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(187, 42)
+        Me.Button6.TabIndex = 6
+        Me.Button6.Text = "หมูทอดกรอบ"
+        Me.Button6.UseVisualStyleBackColor = False
         '
-        'DataTable1BindingSource
+        'Button5
         '
-        Me.DataTable1BindingSource.DataMember = "DataTable1"
-        Me.DataTable1BindingSource.DataSource = Me.Table1
+        Me.Button5.BackColor = System.Drawing.Color.LightGreen
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Location = New System.Drawing.Point(176, 100)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(140, 42)
+        Me.Button5.TabIndex = 5
+        Me.Button5.Text = "ข้าวผัดหมู"
+        Me.Button5.UseVisualStyleBackColor = False
         '
-        'DataTable1TableAdapter
+        'Button7
         '
-        Me.DataTable1TableAdapter.ClearBeforeFill = True
+        Me.Button7.BackColor = System.Drawing.Color.LightGreen
+        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.Location = New System.Drawing.Point(8, 150)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(113, 42)
+        Me.Button7.TabIndex = 7
+        Me.Button7.Text = "เป็ดนึ่ง"
+        Me.Button7.UseVisualStyleBackColor = False
         '
-        'Table2
+        'Button4
         '
-        Me.Table2.DataSetName = "table"
-        Me.Table2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Button4.BackColor = System.Drawing.Color.LightGreen
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(8, 100)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(160, 42)
+        Me.Button4.TabIndex = 4
+        Me.Button4.Text = "ข้าวหน้าเป็ด"
+        Me.Button4.UseVisualStyleBackColor = False
         '
-        'DataTable1BindingSource1
+        'Button3
         '
-        Me.DataTable1BindingSource1.DataMember = "DataTable1"
-        Me.DataTable1BindingSource1.DataSource = Me.Table2
+        Me.Button3.BackColor = System.Drawing.Color.LightGreen
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(443, 50)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(134, 42)
+        Me.Button3.TabIndex = 3
+        Me.Button3.Text = "ข้าวไก่อบ"
+        Me.Button3.UseVisualStyleBackColor = False
         '
-        'DataTable1BindingSource2
+        'Button9
         '
-        Me.DataTable1BindingSource2.DataMember = "DataTable1"
-        Me.DataTable1BindingSource2.DataSource = Me.Table2
+        Me.Button9.BackColor = System.Drawing.Color.LightGreen
+        Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button9.Location = New System.Drawing.Point(324, 100)
+        Me.Button9.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(175, 42)
+        Me.Button9.TabIndex = 9
+        Me.Button9.Text = "ข้าวหมูกรอบ"
+        Me.Button9.UseVisualStyleBackColor = False
         '
-        'Menu
+        'Button2
         '
-        Me.Menu.DataSetName = "menu"
-        Me.Menu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Button2.BackColor = System.Drawing.Color.LightGreen
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(332, 50)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(103, 42)
+        Me.Button2.TabIndex = 2
+        Me.Button2.Text = "ข้าวผัด"
+        Me.Button2.UseVisualStyleBackColor = False
         '
-        'FoodBindingSource
+        'Button1
         '
-        Me.FoodBindingSource.DataMember = "food"
-        Me.FoodBindingSource.DataSource = Me.Menu
+        Me.Button1.BackColor = System.Drawing.Color.LightGreen
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(190, 50)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(134, 42)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "ข้าวต้มกุ้ง"
+        Me.Button1.UseVisualStyleBackColor = False
         '
-        'FoodTableAdapter
+        'Button10
         '
-        Me.FoodTableAdapter.ClearBeforeFill = True
+        Me.Button10.BackColor = System.Drawing.Color.LightGreen
+        Me.Button10.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button10.Location = New System.Drawing.Point(8, 50)
+        Me.Button10.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(174, 42)
+        Me.Button10.TabIndex = 0
+        Me.Button10.Text = "ข้าวขาหมูตุ๋น"
+        Me.Button10.UseVisualStyleBackColor = False
         '
-        'GroupBox1
+        'GroupBox2
         '
-        Me.GroupBox1.Controls.Add(Me.btnTableB5)
-        Me.GroupBox1.Controls.Add(Me.btnTableB4)
-        Me.GroupBox1.Controls.Add(Me.btnTableB3)
-        Me.GroupBox1.Controls.Add(Me.btnTableB2)
-        Me.GroupBox1.Controls.Add(Me.btnTableB1)
-        Me.GroupBox1.Controls.Add(Me.btnTableA5)
-        Me.GroupBox1.Controls.Add(Me.btnTableA4)
-        Me.GroupBox1.Controls.Add(Me.btnTableA3)
-        Me.GroupBox1.Controls.Add(Me.btnTableA2)
-        Me.GroupBox1.Controls.Add(Me.btnTableA1)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 13)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(616, 188)
-        Me.GroupBox1.TabIndex = 2
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "เลือกโต๊ะอาหาร"
+        Me.GroupBox2.Controls.Add(Me.Button6)
+        Me.GroupBox2.Controls.Add(Me.Button5)
+        Me.GroupBox2.Controls.Add(Me.Button7)
+        Me.GroupBox2.Controls.Add(Me.Button4)
+        Me.GroupBox2.Controls.Add(Me.Button8)
+        Me.GroupBox2.Controls.Add(Me.Button3)
+        Me.GroupBox2.Controls.Add(Me.Button9)
+        Me.GroupBox2.Controls.Add(Me.Button2)
+        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Controls.Add(Me.Button10)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(13, 235)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Size = New System.Drawing.Size(616, 233)
+        Me.GroupBox2.TabIndex = 12
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "เลือกเมนูอาหารที่จะสั่ง"
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.LightGreen
+        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.Location = New System.Drawing.Point(324, 150)
+        Me.Button8.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(113, 42)
+        Me.Button8.TabIndex = 8
+        Me.Button8.Text = "ไก่ทอด"
+        Me.Button8.UseVisualStyleBackColor = False
         '
         'btnTableB5
         '
@@ -240,180 +317,105 @@ Partial Class Form3
         Me.btnTableA1.Text = "A1"
         Me.btnTableA1.UseVisualStyleBackColor = False
         '
-        'GroupBox2
+        'GroupBox1
         '
-        Me.GroupBox2.Controls.Add(Me.Button6)
-        Me.GroupBox2.Controls.Add(Me.Button5)
-        Me.GroupBox2.Controls.Add(Me.Button7)
-        Me.GroupBox2.Controls.Add(Me.Button4)
-        Me.GroupBox2.Controls.Add(Me.Button8)
-        Me.GroupBox2.Controls.Add(Me.Button3)
-        Me.GroupBox2.Controls.Add(Me.Button9)
-        Me.GroupBox2.Controls.Add(Me.Button2)
-        Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Me.Button10)
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(13, 228)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Size = New System.Drawing.Size(616, 233)
-        Me.GroupBox2.TabIndex = 10
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "เลือกเมนูอาหารที่จะสั่ง"
+        Me.GroupBox1.Controls.Add(Me.btnTableB5)
+        Me.GroupBox1.Controls.Add(Me.btnTableB4)
+        Me.GroupBox1.Controls.Add(Me.btnTableB3)
+        Me.GroupBox1.Controls.Add(Me.btnTableB2)
+        Me.GroupBox1.Controls.Add(Me.btnTableB1)
+        Me.GroupBox1.Controls.Add(Me.btnTableA5)
+        Me.GroupBox1.Controls.Add(Me.btnTableA4)
+        Me.GroupBox1.Controls.Add(Me.btnTableA3)
+        Me.GroupBox1.Controls.Add(Me.btnTableA2)
+        Me.GroupBox1.Controls.Add(Me.btnTableA1)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(13, 13)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Size = New System.Drawing.Size(616, 188)
+        Me.GroupBox1.TabIndex = 11
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "เลือกโต๊ะอาหาร"
         '
-        'Button10
+        'FoodTableAdapter
         '
-        Me.Button10.BackColor = System.Drawing.Color.LightGreen
-        Me.Button10.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.Location = New System.Drawing.Point(8, 50)
-        Me.Button10.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(174, 42)
-        Me.Button10.TabIndex = 0
-        Me.Button10.Text = "ข้าวขาหมูตุ๋น"
-        Me.Button10.UseVisualStyleBackColor = False
+        Me.FoodTableAdapter.ClearBeforeFill = True
         '
-        'Button1
+        'FoodBindingSource
         '
-        Me.Button1.BackColor = System.Drawing.Color.LightGreen
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(190, 50)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(134, 42)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "ข้าวต้มกุ้ง"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.FoodBindingSource.DataMember = "food"
+        Me.FoodBindingSource.DataSource = Me.Menu
         '
-        'Button2
+        'Menu
         '
-        Me.Button2.BackColor = System.Drawing.Color.LightGreen
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(332, 50)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(103, 42)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "ข้าวผัด"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.Menu.DataSetName = "menu"
+        Me.Menu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Button3
+        'DataTable1BindingSource2
         '
-        Me.Button3.BackColor = System.Drawing.Color.LightGreen
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(443, 50)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(134, 42)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "ข้าวไก่อบ"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.DataTable1BindingSource2.DataMember = "DataTable1"
+        Me.DataTable1BindingSource2.DataSource = Me.Table2
         '
-        'Button4
+        'Table2
         '
-        Me.Button4.BackColor = System.Drawing.Color.LightGreen
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(8, 100)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(160, 42)
-        Me.Button4.TabIndex = 4
-        Me.Button4.Text = "ข้าวหน้าเป็ด"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.Table2.DataSetName = "table"
+        Me.Table2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Button5
+        'DataTable1BindingSource1
         '
-        Me.Button5.BackColor = System.Drawing.Color.LightGreen
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(176, 100)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(140, 42)
-        Me.Button5.TabIndex = 5
-        Me.Button5.Text = "ข้าวผัดหมู"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.DataTable1BindingSource1.DataMember = "DataTable1"
+        Me.DataTable1BindingSource1.DataSource = Me.Table2
         '
-        'Button6
+        'DataTable1TableAdapter
         '
-        Me.Button6.BackColor = System.Drawing.Color.LightGreen
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(129, 150)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(187, 42)
-        Me.Button6.TabIndex = 6
-        Me.Button6.Text = "หมูทอดกรอบ"
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.DataTable1TableAdapter.ClearBeforeFill = True
         '
-        'Button7
+        'DataTable1BindingSource
         '
-        Me.Button7.BackColor = System.Drawing.Color.LightGreen
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(8, 150)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(113, 42)
-        Me.Button7.TabIndex = 7
-        Me.Button7.Text = "เป็ดนึ่ง"
-        Me.Button7.UseVisualStyleBackColor = False
+        Me.DataTable1BindingSource.DataMember = "DataTable1"
+        Me.DataTable1BindingSource.DataSource = Me.Table1
         '
-        'Button8
+        'Table1
         '
-        Me.Button8.BackColor = System.Drawing.Color.LightGreen
-        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.Location = New System.Drawing.Point(324, 150)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(113, 42)
-        Me.Button8.TabIndex = 8
-        Me.Button8.Text = "ไก่ทอด"
-        Me.Button8.UseVisualStyleBackColor = False
-        '
-        'Button9
-        '
-        Me.Button9.BackColor = System.Drawing.Color.LightGreen
-        Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(324, 100)
-        Me.Button9.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(175, 42)
-        Me.Button9.TabIndex = 9
-        Me.Button9.Text = "ข้าวหมูกรอบ"
-        Me.Button9.UseVisualStyleBackColor = False
+        Me.Table1.DataSetName = "table"
+        Me.Table1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(917, 534)
+        Me.ClientSize = New System.Drawing.Size(1019, 532)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form3"
         Me.Text = "Form3"
-        CType(Me.Table1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
+        CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Menu, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataTable1BindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Table2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataTable1BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataTable1BindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Menu, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox2.ResumeLayout(False)
+        CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Table1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Table1 As table
-    Friend WithEvents DataTable1BindingSource As BindingSource
-    Friend WithEvents DataTable1TableAdapter As tableTableAdapters.DataTable1TableAdapter
-    Friend WithEvents Table2 As table
-    Friend WithEvents DataTable1BindingSource1 As BindingSource
-    Friend WithEvents DataTable1BindingSource2 As BindingSource
-    Friend WithEvents Menu As menu
-    Friend WithEvents FoodBindingSource As BindingSource
-    Friend WithEvents FoodTableAdapter As menuTableAdapters.foodTableAdapter
-    Friend WithEvents GroupBox1 As GroupBox
+
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button7 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button9 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button10 As Button
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Button8 As Button
     Friend WithEvents btnTableB5 As Button
     Friend WithEvents btnTableB4 As Button
     Friend WithEvents btnTableB3 As Button
@@ -424,15 +426,14 @@ Partial Class Form3
     Friend WithEvents btnTableA3 As Button
     Friend WithEvents btnTableA2 As Button
     Friend WithEvents btnTableA1 As Button
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Button10 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button9 As Button
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents FoodTableAdapter As menuTableAdapters.foodTableAdapter
+    Friend WithEvents FoodBindingSource As BindingSource
+    Friend WithEvents Menu As menu
+    Friend WithEvents DataTable1BindingSource2 As BindingSource
+    Friend WithEvents Table2 As table
+    Friend WithEvents DataTable1BindingSource1 As BindingSource
+    Friend WithEvents DataTable1TableAdapter As tableTableAdapters.DataTable1TableAdapter
+    Friend WithEvents DataTable1BindingSource As BindingSource
+    Friend WithEvents Table1 As table
 End Class
