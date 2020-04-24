@@ -1,12 +1,6 @@
 ﻿Public Class b
     Sub showdata(ByVal show As String)
-        con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\source\repos\6110210305_LAB5\6110210305_LAB5\Database1.mdf;Integrated Security=True")
-        Dim query As String = "SELECT Student.StudentId , student.FirstName ,Student.LastName , Faculty.FacultyName,Student.GPA FROM Student JOIN Faculty ON Student.FacultyId=Faculty.FacultyId;"
-        cmd = New SqlCommand(query, con)
-        Dim da = New SqlDataAdapter(cmd)
-        Dim dt As New DataTable
-        da.Fill(dt)
-        DataGridView1.DataSource = dt
+
 
 
     End Sub
@@ -37,4 +31,7 @@
 
     End Sub
 
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
 End Class

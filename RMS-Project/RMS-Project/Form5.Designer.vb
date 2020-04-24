@@ -25,6 +25,7 @@ Partial Class Form5
         Me.incomeID = New System.Windows.Forms.TextBox()
         Me.incomeName = New System.Windows.Forms.TextBox()
         Me.btn1 = New System.Windows.Forms.Button()
+        Me.price = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'incomeID
@@ -50,11 +51,19 @@ Partial Class Form5
         Me.btn1.Text = "Button1"
         Me.btn1.UseVisualStyleBackColor = True
         '
+        'price
+        '
+        Me.price.Location = New System.Drawing.Point(67, 163)
+        Me.price.Name = "price"
+        Me.price.Size = New System.Drawing.Size(100, 22)
+        Me.price.TabIndex = 5
+        '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1269, 450)
+        Me.Controls.Add(Me.price)
         Me.Controls.Add(Me.btn1)
         Me.Controls.Add(Me.incomeName)
         Me.Controls.Add(Me.incomeID)
@@ -67,4 +76,5 @@ Partial Class Form5
     Friend WithEvents incomeID As TextBox
     Friend WithEvents incomeName As TextBox
     Friend WithEvents btn1 As Button
+    Friend WithEvents price As TextBox
 End Class
