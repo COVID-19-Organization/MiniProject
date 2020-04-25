@@ -188,6 +188,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ShopDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ShopDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShopDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="table.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -289,6 +294,17 @@
     </None>
     <None Include="ShopDataSet1.xss">
       <DependentUpon>ShopDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ShopDataSet2.xsc">
+      <DependentUpon>ShopDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ShopDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShopDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShopDataSet2.xss">
+      <DependentUpon>ShopDataSet2.xsd</DependentUpon>
     </None>
     <None Include="table.xsc">
       <DependentUpon>table.xsd</DependentUpon>
