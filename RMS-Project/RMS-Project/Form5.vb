@@ -28,8 +28,8 @@ Public Class Form5
         cmd.CommandType = CommandType.Text
         cmd.CommandText = "insert into income values('" & inID.Text & "','" & inname.Text & "','" & inprice.Text & "','" & DateTimeIncome.Value & "')"
         cmd.ExecuteNonQuery()
-
         disp_data()
+        disp_data2()
 
         MessageBox.Show("Yess")
 
@@ -104,8 +104,8 @@ Public Class Form5
         cmd.CommandType = CommandType.Text
         cmd.CommandText = "delete from income where incomeID='" & inID.Text & "'"
         cmd.ExecuteNonQuery()
-
         disp_data()
+        disp_data2()
 
 
     End Sub
@@ -121,7 +121,7 @@ Public Class Form5
         cmd.CommandText = "update income set incomeName='" & inname.Text & "', IncomePrice='" & inprice.Text & "', IncomeDate='" & DateTimeIncome.Value & "', incomeId='" & inID.Text & "' where incomeID=" & i & ""
         cmd.ExecuteNonQuery()
         disp_data()
-
+        disp_data2()
     End Sub
 
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
@@ -161,8 +161,8 @@ Public Class Form5
         cmd.CommandText = "insert into expen values('" & exId.Text & "','" & exName.Text & "','" & exPrice.Text & "','" & exDate.Value & "')"
         cmd.ExecuteNonQuery()
 
+        disp_data()
         disp_data2()
-
         MessageBox.Show("Yess")
 
     End Sub
@@ -190,6 +190,7 @@ Public Class Form5
 
         Next
         sum2.Text = colsum
+        sum3.Text = Int(sum1.Text) - Int(sum2.Text)
 
     End Sub
 
@@ -204,8 +205,8 @@ Public Class Form5
         cmd.CommandText = "delete from expen where exId='" & exId.Text & "'"
         cmd.ExecuteNonQuery()
 
+        disp_data()
         disp_data2()
-
 
     End Sub
 
@@ -219,6 +220,9 @@ Public Class Form5
         cmd.CommandType = CommandType.Text
         cmd.CommandText = "update expen set exName='" & exName.Text & "', exPrice='" & exPrice.Text & "', exDate='" & exDate.Value & "', exId='" & exId.Text & "' where exId=" & i2 & ""
         cmd.ExecuteNonQuery()
+        disp_data()
         disp_data2()
     End Sub
+
+
 End Class

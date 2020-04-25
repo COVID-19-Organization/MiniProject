@@ -36,6 +36,8 @@ Partial Class Form5
         Me.IncomeNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IncomePriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IncomeDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IncomeBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ShopDataSet1 = New RMS_Project.ShopDataSet1()
         Me.IncomeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ShopDataSet = New RMS_Project.ShopDataSet()
         Me.edit1 = New System.Windows.Forms.Button()
@@ -58,7 +60,6 @@ Partial Class Form5
         Me.ExPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ExDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ExpenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ShopDataSet1 = New RMS_Project.ShopDataSet1()
         Me.ExpenTableAdapter = New RMS_Project.ShopDataSet1TableAdapters.expenTableAdapter()
         Me.sum1 = New System.Windows.Forms.Label()
         Me.sum2 = New System.Windows.Forms.Label()
@@ -68,15 +69,19 @@ Partial Class Form5
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.IncomeBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IncomeTableAdapter1 = New RMS_Project.ShopDataSet1TableAdapters.incomeTableAdapter()
+        Me.sum3 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IncomeBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ShopDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IncomeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShopDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExpenBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ShopDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IncomeBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'inID
@@ -202,6 +207,16 @@ Partial Class Form5
         Me.IncomeDateDataGridViewTextBoxColumn.Name = "IncomeDateDataGridViewTextBoxColumn"
         Me.IncomeDateDataGridViewTextBoxColumn.Width = 125
         '
+        'IncomeBindingSource1
+        '
+        Me.IncomeBindingSource1.DataMember = "income"
+        Me.IncomeBindingSource1.DataSource = Me.ShopDataSet1
+        '
+        'ShopDataSet1
+        '
+        Me.ShopDataSet1.DataSetName = "ShopDataSet1"
+        Me.ShopDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'IncomeBindingSource
         '
         Me.IncomeBindingSource.DataMember = "income"
@@ -292,9 +307,9 @@ Partial Class Form5
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(11, 306)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(86, 25)
+        Me.Label8.Size = New System.Drawing.Size(94, 25)
         Me.Label8.TabIndex = 19
-        Me.Label8.Text = "รหัสรายรับ"
+        Me.Label8.Text = "รหัสรายจ่าย"
         '
         'exDate
         '
@@ -393,11 +408,6 @@ Partial Class Form5
         Me.ExpenBindingSource.DataMember = "expen"
         Me.ExpenBindingSource.DataSource = Me.ShopDataSet1
         '
-        'ShopDataSet1
-        '
-        Me.ShopDataSet1.DataSetName = "ShopDataSet1"
-        Me.ShopDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'ExpenTableAdapter
         '
         Me.ExpenTableAdapter.ClearBeforeFill = True
@@ -490,20 +500,72 @@ Partial Class Form5
         Me.Label13.TabIndex = 33
         Me.Label13.Text = "*หากต้องการลบข้อมูล กรุณาเลือกข้อมูลจากช่องรหัสเท่านั้น"
         '
-        'IncomeBindingSource1
-        '
-        Me.IncomeBindingSource1.DataMember = "income"
-        Me.IncomeBindingSource1.DataSource = Me.ShopDataSet1
-        '
         'IncomeTableAdapter1
         '
         Me.IncomeTableAdapter1.ClearBeforeFill = True
+        '
+        'sum3
+        '
+        Me.sum3.AutoSize = True
+        Me.sum3.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.sum3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.sum3.ForeColor = System.Drawing.Color.Red
+        Me.sum3.Location = New System.Drawing.Point(414, 546)
+        Me.sum3.Name = "sum3"
+        Me.sum3.Size = New System.Drawing.Size(24, 25)
+        Me.sum3.TabIndex = 34
+        Me.sum3.Text = "0"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(262, 546)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(120, 25)
+        Me.Label14.TabIndex = 35
+        Me.Label14.Text = "ยอดเงินคงเหลือ"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(470, 546)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(43, 25)
+        Me.Label15.TabIndex = 36
+        Me.Label15.Text = "บาท"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(124, 257)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(101, 32)
+        Me.Label16.TabIndex = 37
+        Me.Label16.Text = "รายจ่าย"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(124, 5)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(90, 32)
+        Me.Label17.TabIndex = 38
+        Me.Label17.Text = "รายรับ"
         '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1269, 519)
+        Me.ClientSize = New System.Drawing.Size(1269, 742)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.sum3)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
@@ -538,12 +600,12 @@ Partial Class Form5
         Me.Name = "Form5"
         Me.Text = "รายรับรายจ่าย"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IncomeBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ShopDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IncomeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ShopDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ExpenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ShopDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IncomeBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -595,4 +657,9 @@ Partial Class Form5
     Friend WithEvents Label13 As Label
     Friend WithEvents IncomeBindingSource1 As BindingSource
     Friend WithEvents IncomeTableAdapter1 As ShopDataSet1TableAdapters.incomeTableAdapter
+    Friend WithEvents sum3 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label17 As Label
 End Class
