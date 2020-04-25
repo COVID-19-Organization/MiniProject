@@ -68,12 +68,15 @@ Partial Class Form5
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.IncomeBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IncomeTableAdapter1 = New RMS_Project.ShopDataSet1TableAdapters.incomeTableAdapter()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IncomeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShopDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExpenBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShopDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IncomeBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'inID
@@ -155,7 +158,7 @@ Partial Class Form5
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.Turquoise
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IncomeIDDataGridViewTextBoxColumn, Me.IncomeNameDataGridViewTextBoxColumn, Me.IncomePriceDataGridViewTextBoxColumn, Me.IncomeDateDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.IncomeBindingSource
+        Me.DataGridView1.DataSource = Me.IncomeBindingSource1
         Me.DataGridView1.Location = New System.Drawing.Point(435, 40)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
@@ -405,7 +408,7 @@ Partial Class Form5
         Me.sum1.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.sum1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.sum1.ForeColor = System.Drawing.Color.Red
-        Me.sum1.Location = New System.Drawing.Point(548, 227)
+        Me.sum1.Location = New System.Drawing.Point(892, 227)
         Me.sum1.Name = "sum1"
         Me.sum1.Size = New System.Drawing.Size(24, 25)
         Me.sum1.TabIndex = 26
@@ -417,7 +420,7 @@ Partial Class Form5
         Me.sum2.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.sum2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.sum2.ForeColor = System.Drawing.Color.Red
-        Me.sum2.Location = New System.Drawing.Point(548, 485)
+        Me.sum2.Location = New System.Drawing.Point(892, 488)
         Me.sum2.Name = "sum2"
         Me.sum2.Size = New System.Drawing.Size(24, 25)
         Me.sum2.TabIndex = 27
@@ -427,7 +430,7 @@ Partial Class Form5
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(430, 227)
+        Me.Label4.Location = New System.Drawing.Point(774, 227)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(95, 25)
         Me.Label4.TabIndex = 28
@@ -437,7 +440,7 @@ Partial Class Form5
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(430, 485)
+        Me.Label9.Location = New System.Drawing.Point(774, 488)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(103, 25)
         Me.Label9.TabIndex = 29
@@ -447,7 +450,7 @@ Partial Class Form5
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(594, 227)
+        Me.Label10.Location = New System.Drawing.Point(938, 227)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(43, 25)
         Me.Label10.TabIndex = 30
@@ -457,7 +460,7 @@ Partial Class Form5
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(594, 485)
+        Me.Label11.Location = New System.Drawing.Point(938, 488)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(43, 25)
         Me.Label11.TabIndex = 31
@@ -486,6 +489,15 @@ Partial Class Form5
         Me.Label13.Size = New System.Drawing.Size(359, 17)
         Me.Label13.TabIndex = 33
         Me.Label13.Text = "*หากต้องการลบข้อมูล กรุณาเลือกข้อมูลจากช่องรหัสเท่านั้น"
+        '
+        'IncomeBindingSource1
+        '
+        Me.IncomeBindingSource1.DataMember = "income"
+        Me.IncomeBindingSource1.DataSource = Me.ShopDataSet1
+        '
+        'IncomeTableAdapter1
+        '
+        Me.IncomeTableAdapter1.ClearBeforeFill = True
         '
         'Form5
         '
@@ -531,6 +543,7 @@ Partial Class Form5
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ExpenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ShopDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IncomeBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -580,4 +593,6 @@ Partial Class Form5
     Friend WithEvents ExDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
+    Friend WithEvents IncomeBindingSource1 As BindingSource
+    Friend WithEvents IncomeTableAdapter1 As ShopDataSet1TableAdapters.incomeTableAdapter
 End Class

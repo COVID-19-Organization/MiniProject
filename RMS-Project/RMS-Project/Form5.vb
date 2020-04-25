@@ -8,6 +8,8 @@ Public Class Form5
 
 
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'ShopDataSet1.income' table. You can move, or remove it, as needed.
+        Me.IncomeTableAdapter1.Fill(Me.ShopDataSet1.income)
         'TODO: This line of code loads data into the 'ShopDataSet1.expen' table. You can move, or remove it, as needed.
         Me.ExpenTableAdapter.Fill(Me.ShopDataSet1.expen)
         'TODO: This line of code loads data into the 'ShopDataSet.income' table. You can move, or remove it, as needed.
