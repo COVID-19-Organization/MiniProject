@@ -53,10 +53,6 @@ Partial Class Form5
         Me.exName = New System.Windows.Forms.TextBox()
         Me.exId = New System.Windows.Forms.TextBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.ExIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ExNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ExPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ExDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ExpenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ShopDataSet1 = New RMS_Project.ShopDataSet1()
         Me.ExpenTableAdapter = New RMS_Project.ShopDataSet1TableAdapters.expenTableAdapter()
@@ -66,6 +62,10 @@ Partial Class Form5
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.ExIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ExNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ExPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ExDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IncomeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShopDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -111,10 +111,10 @@ Partial Class Form5
         '
         'DateTimeIncome
         '
-        Me.DateTimeIncome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimeIncome.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimeIncome.Location = New System.Drawing.Point(130, 148)
         Me.DateTimeIncome.Name = "DateTimeIncome"
-        Me.DateTimeIncome.Size = New System.Drawing.Size(257, 30)
+        Me.DateTimeIncome.Size = New System.Drawing.Size(257, 22)
         Me.DateTimeIncome.TabIndex = 6
         '
         'Label1
@@ -150,6 +150,7 @@ Partial Class Form5
         'DataGridView1
         '
         Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.Turquoise
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IncomeIDDataGridViewTextBoxColumn, Me.IncomeNameDataGridViewTextBoxColumn, Me.IncomePriceDataGridViewTextBoxColumn, Me.IncomeDateDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.IncomeBindingSource
@@ -292,10 +293,10 @@ Partial Class Form5
         '
         'exDate
         '
-        Me.exDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.exDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.exDate.Location = New System.Drawing.Point(130, 414)
         Me.exDate.Name = "exDate"
-        Me.exDate.Size = New System.Drawing.Size(257, 30)
+        Me.exDate.Size = New System.Drawing.Size(257, 22)
         Me.exDate.TabIndex = 18
         '
         'exPrice
@@ -336,6 +337,7 @@ Partial Class Form5
         'DataGridView2
         '
         Me.DataGridView2.AutoGenerateColumns = False
+        Me.DataGridView2.BackgroundColor = System.Drawing.Color.Turquoise
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ExIdDataGridViewTextBoxColumn, Me.ExNameDataGridViewTextBoxColumn, Me.ExPriceDataGridViewTextBoxColumn, Me.ExDateDataGridViewTextBoxColumn})
         Me.DataGridView2.DataSource = Me.ExpenBindingSource
@@ -345,38 +347,6 @@ Partial Class Form5
         Me.DataGridView2.RowTemplate.Height = 24
         Me.DataGridView2.Size = New System.Drawing.Size(550, 179)
         Me.DataGridView2.TabIndex = 25
-        '
-        'ExIdDataGridViewTextBoxColumn
-        '
-        Me.ExIdDataGridViewTextBoxColumn.DataPropertyName = "exId"
-        Me.ExIdDataGridViewTextBoxColumn.HeaderText = "exId"
-        Me.ExIdDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.ExIdDataGridViewTextBoxColumn.Name = "ExIdDataGridViewTextBoxColumn"
-        Me.ExIdDataGridViewTextBoxColumn.Width = 125
-        '
-        'ExNameDataGridViewTextBoxColumn
-        '
-        Me.ExNameDataGridViewTextBoxColumn.DataPropertyName = "exName"
-        Me.ExNameDataGridViewTextBoxColumn.HeaderText = "exName"
-        Me.ExNameDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.ExNameDataGridViewTextBoxColumn.Name = "ExNameDataGridViewTextBoxColumn"
-        Me.ExNameDataGridViewTextBoxColumn.Width = 125
-        '
-        'ExPriceDataGridViewTextBoxColumn
-        '
-        Me.ExPriceDataGridViewTextBoxColumn.DataPropertyName = "exPrice"
-        Me.ExPriceDataGridViewTextBoxColumn.HeaderText = "exPrice"
-        Me.ExPriceDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.ExPriceDataGridViewTextBoxColumn.Name = "ExPriceDataGridViewTextBoxColumn"
-        Me.ExPriceDataGridViewTextBoxColumn.Width = 125
-        '
-        'ExDateDataGridViewTextBoxColumn
-        '
-        Me.ExDateDataGridViewTextBoxColumn.DataPropertyName = "exDate"
-        Me.ExDateDataGridViewTextBoxColumn.HeaderText = "exDate"
-        Me.ExDateDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.ExDateDataGridViewTextBoxColumn.Name = "ExDateDataGridViewTextBoxColumn"
-        Me.ExDateDataGridViewTextBoxColumn.Width = 125
         '
         'ExpenBindingSource
         '
@@ -395,9 +365,10 @@ Partial Class Form5
         'sum1
         '
         Me.sum1.AutoSize = True
+        Me.sum1.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.sum1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.sum1.ForeColor = System.Drawing.Color.Red
-        Me.sum1.Location = New System.Drawing.Point(565, 227)
+        Me.sum1.Location = New System.Drawing.Point(548, 227)
         Me.sum1.Name = "sum1"
         Me.sum1.Size = New System.Drawing.Size(24, 25)
         Me.sum1.TabIndex = 26
@@ -406,9 +377,10 @@ Partial Class Form5
         'sum2
         '
         Me.sum2.AutoSize = True
+        Me.sum2.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.sum2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.sum2.ForeColor = System.Drawing.Color.Red
-        Me.sum2.Location = New System.Drawing.Point(565, 485)
+        Me.sum2.Location = New System.Drawing.Point(548, 485)
         Me.sum2.Name = "sum2"
         Me.sum2.Size = New System.Drawing.Size(24, 25)
         Me.sum2.TabIndex = 27
@@ -438,7 +410,7 @@ Partial Class Form5
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(611, 227)
+        Me.Label10.Location = New System.Drawing.Point(594, 227)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(43, 25)
         Me.Label10.TabIndex = 30
@@ -448,11 +420,46 @@ Partial Class Form5
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(611, 485)
+        Me.Label11.Location = New System.Drawing.Point(594, 485)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(43, 25)
         Me.Label11.TabIndex = 31
         Me.Label11.Text = "บาท"
+        '
+        'ExIdDataGridViewTextBoxColumn
+        '
+        Me.ExIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.ExIdDataGridViewTextBoxColumn.DataPropertyName = "exId"
+        Me.ExIdDataGridViewTextBoxColumn.HeaderText = "รหัสรายจ่าย"
+        Me.ExIdDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ExIdDataGridViewTextBoxColumn.Name = "ExIdDataGridViewTextBoxColumn"
+        '
+        'ExNameDataGridViewTextBoxColumn
+        '
+        Me.ExNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.ExNameDataGridViewTextBoxColumn.DataPropertyName = "exName"
+        Me.ExNameDataGridViewTextBoxColumn.HeaderText = "รหัสรายรับ"
+        Me.ExNameDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ExNameDataGridViewTextBoxColumn.Name = "ExNameDataGridViewTextBoxColumn"
+        Me.ExNameDataGridViewTextBoxColumn.Width = 95
+        '
+        'ExPriceDataGridViewTextBoxColumn
+        '
+        Me.ExPriceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.ExPriceDataGridViewTextBoxColumn.DataPropertyName = "exPrice"
+        Me.ExPriceDataGridViewTextBoxColumn.HeaderText = "จำนวนเงิน"
+        Me.ExPriceDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ExPriceDataGridViewTextBoxColumn.Name = "ExPriceDataGridViewTextBoxColumn"
+        Me.ExPriceDataGridViewTextBoxColumn.Width = 94
+        '
+        'ExDateDataGridViewTextBoxColumn
+        '
+        Me.ExDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ExDateDataGridViewTextBoxColumn.DataPropertyName = "exDate"
+        Me.ExDateDataGridViewTextBoxColumn.HeaderText = "วันที่และเวลา"
+        Me.ExDateDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ExDateDataGridViewTextBoxColumn.Name = "ExDateDataGridViewTextBoxColumn"
+        Me.ExDateDataGridViewTextBoxColumn.Width = 106
         '
         'Form5
         '
@@ -533,14 +540,14 @@ Partial Class Form5
     Friend WithEvents ShopDataSet1 As ShopDataSet1
     Friend WithEvents ExpenBindingSource As BindingSource
     Friend WithEvents ExpenTableAdapter As ShopDataSet1TableAdapters.expenTableAdapter
-    Friend WithEvents ExIdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ExNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ExPriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ExDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents sum1 As Label
     Friend WithEvents sum2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents ExIdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ExNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ExPriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ExDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

@@ -18,7 +18,7 @@ Public Class Form5
         End If
         con.Open()
         disp_data()
-
+        disp_data2()
     End Sub
 
     Private Sub btn1_Click(sender As Object, e As EventArgs) Handles save1.Click
