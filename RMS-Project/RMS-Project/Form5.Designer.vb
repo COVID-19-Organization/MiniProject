@@ -42,6 +42,17 @@ Partial Class Form5
         Me.edit1 = New System.Windows.Forms.Button()
         Me.del1 = New System.Windows.Forms.Button()
         Me.IncomeTableAdapter = New RMS_Project.ShopDataSetTableAdapters.incomeTableAdapter()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IncomeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShopDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,7 +61,7 @@ Partial Class Form5
         'inID
         '
         Me.inID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.inID.Location = New System.Drawing.Point(136, 65)
+        Me.inID.Location = New System.Drawing.Point(130, 40)
         Me.inID.MaxLength = 5
         Me.inID.Name = "inID"
         Me.inID.Size = New System.Drawing.Size(257, 30)
@@ -59,7 +70,7 @@ Partial Class Form5
         'inname
         '
         Me.inname.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.inname.Location = New System.Drawing.Point(136, 101)
+        Me.inname.Location = New System.Drawing.Point(130, 76)
         Me.inname.Name = "inname"
         Me.inname.Size = New System.Drawing.Size(257, 30)
         Me.inname.TabIndex = 3
@@ -67,7 +78,7 @@ Partial Class Form5
         'save1
         '
         Me.save1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.save1.Location = New System.Drawing.Point(67, 209)
+        Me.save1.Location = New System.Drawing.Point(61, 184)
         Me.save1.Name = "save1"
         Me.save1.Size = New System.Drawing.Size(103, 37)
         Me.save1.TabIndex = 4
@@ -77,7 +88,7 @@ Partial Class Form5
         'inprice
         '
         Me.inprice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.inprice.Location = New System.Drawing.Point(136, 137)
+        Me.inprice.Location = New System.Drawing.Point(130, 112)
         Me.inprice.Name = "inprice"
         Me.inprice.Size = New System.Drawing.Size(257, 30)
         Me.inprice.TabIndex = 5
@@ -85,7 +96,7 @@ Partial Class Form5
         'DateTimeIncome
         '
         Me.DateTimeIncome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimeIncome.Location = New System.Drawing.Point(136, 173)
+        Me.DateTimeIncome.Location = New System.Drawing.Point(130, 148)
         Me.DateTimeIncome.Name = "DateTimeIncome"
         Me.DateTimeIncome.Size = New System.Drawing.Size(257, 30)
         Me.DateTimeIncome.TabIndex = 6
@@ -94,7 +105,7 @@ Partial Class Form5
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(17, 65)
+        Me.Label1.Location = New System.Drawing.Point(11, 40)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(86, 25)
         Me.Label1.TabIndex = 7
@@ -104,7 +115,7 @@ Partial Class Form5
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(17, 101)
+        Me.Label2.Location = New System.Drawing.Point(11, 76)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(91, 25)
         Me.Label2.TabIndex = 8
@@ -114,7 +125,7 @@ Partial Class Form5
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(17, 137)
+        Me.Label3.Location = New System.Drawing.Point(11, 112)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(108, 25)
         Me.Label3.TabIndex = 9
@@ -124,7 +135,7 @@ Partial Class Form5
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(17, 173)
+        Me.Label4.Location = New System.Drawing.Point(11, 148)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(45, 25)
         Me.Label4.TabIndex = 10
@@ -136,7 +147,7 @@ Partial Class Form5
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IncomeIDDataGridViewTextBoxColumn, Me.IncomeNameDataGridViewTextBoxColumn, Me.IncomePriceDataGridViewTextBoxColumn, Me.IncomeDateDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.IncomeBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(399, 65)
+        Me.DataGridView1.Location = New System.Drawing.Point(393, 40)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
@@ -192,7 +203,7 @@ Partial Class Form5
         'edit1
         '
         Me.edit1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.edit1.Location = New System.Drawing.Point(176, 209)
+        Me.edit1.Location = New System.Drawing.Point(170, 184)
         Me.edit1.Name = "edit1"
         Me.edit1.Size = New System.Drawing.Size(103, 37)
         Me.edit1.TabIndex = 12
@@ -202,7 +213,7 @@ Partial Class Form5
         'del1
         '
         Me.del1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.del1.Location = New System.Drawing.Point(285, 209)
+        Me.del1.Location = New System.Drawing.Point(279, 184)
         Me.del1.Name = "del1"
         Me.del1.Size = New System.Drawing.Size(103, 37)
         Me.del1.TabIndex = 13
@@ -213,11 +224,125 @@ Partial Class Form5
         '
         Me.IncomeTableAdapter.ClearBeforeFill = True
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(279, 450)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(103, 37)
+        Me.Button1.TabIndex = 24
+        Me.Button1.Text = "ลบ"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(170, 450)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(103, 37)
+        Me.Button2.TabIndex = 23
+        Me.Button2.Text = "แก้ไข"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(11, 414)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(45, 25)
+        Me.Label5.TabIndex = 22
+        Me.Label5.Text = "วันที่"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(11, 378)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(108, 25)
+        Me.Label6.TabIndex = 21
+        Me.Label6.Text = "จำนวน(บาท)"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(11, 342)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(91, 25)
+        Me.Label7.TabIndex = 20
+        Me.Label7.Text = "รายละเอียด"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(11, 306)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(86, 25)
+        Me.Label8.TabIndex = 19
+        Me.Label8.Text = "รหัสรายรับ"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Location = New System.Drawing.Point(130, 414)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(257, 30)
+        Me.DateTimePicker1.TabIndex = 18
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(130, 378)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(257, 30)
+        Me.TextBox1.TabIndex = 17
+        '
+        'Button3
+        '
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(61, 450)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(103, 37)
+        Me.Button3.TabIndex = 16
+        Me.Button3.Text = "บันทึก"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(130, 342)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(257, 30)
+        Me.TextBox2.TabIndex = 15
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(130, 306)
+        Me.TextBox3.MaxLength = 5
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(257, 30)
+        Me.TextBox3.TabIndex = 14
+        '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1269, 450)
+        Me.ClientSize = New System.Drawing.Size(1269, 497)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.del1)
         Me.Controls.Add(Me.edit1)
         Me.Controls.Add(Me.DataGridView1)
@@ -258,4 +383,15 @@ Partial Class Form5
     Friend WithEvents IncomeNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IncomePriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IncomeDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox3 As TextBox
 End Class
