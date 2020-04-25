@@ -23,10 +23,12 @@ Partial Class Form5
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Dim ReportDataSource4 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.IncomeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ShopDataSet = New RMS_Project.ShopDataSet()
+        Me.ExpenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ShopDataSet1 = New RMS_Project.ShopDataSet1()
         Me.inID = New System.Windows.Forms.TextBox()
         Me.inname = New System.Windows.Forms.TextBox()
         Me.save1 = New System.Windows.Forms.Button()
@@ -41,7 +43,6 @@ Partial Class Form5
         Me.IncomePriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IncomeDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IncomeBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ShopDataSet1 = New RMS_Project.ShopDataSet1()
         Me.edit1 = New System.Windows.Forms.Button()
         Me.del1 = New System.Windows.Forms.Button()
         Me.IncomeTableAdapter = New RMS_Project.ShopDataSetTableAdapters.incomeTableAdapter()
@@ -61,7 +62,6 @@ Partial Class Form5
         Me.ExNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ExPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ExDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ExpenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ExpenTableAdapter = New RMS_Project.ShopDataSet1TableAdapters.expenTableAdapter()
         Me.sum1 = New System.Windows.Forms.Label()
         Me.sum2 = New System.Windows.Forms.Label()
@@ -69,7 +69,6 @@ Partial Class Form5
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.IncomeTableAdapter1 = New RMS_Project.ShopDataSet1TableAdapters.incomeTableAdapter()
         Me.sum3 = New System.Windows.Forms.Label()
@@ -80,17 +79,18 @@ Partial Class Form5
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.ReportViewer2 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
         CType(Me.IncomeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShopDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ExpenBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ShopDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IncomeBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ShopDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ExpenBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -105,6 +105,16 @@ Partial Class Form5
         '
         Me.ShopDataSet.DataSetName = "ShopDataSet"
         Me.ShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ExpenBindingSource
+        '
+        Me.ExpenBindingSource.DataMember = "expen"
+        Me.ExpenBindingSource.DataSource = Me.ShopDataSet1
+        '
+        'ShopDataSet1
+        '
+        Me.ShopDataSet1.DataSetName = "ShopDataSet1"
+        Me.ShopDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'inID
         '
@@ -233,11 +243,6 @@ Partial Class Form5
         '
         Me.IncomeBindingSource1.DataMember = "income"
         Me.IncomeBindingSource1.DataSource = Me.ShopDataSet1
-        '
-        'ShopDataSet1
-        '
-        Me.ShopDataSet1.DataSetName = "ShopDataSet1"
-        Me.ShopDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'edit1
         '
@@ -415,11 +420,6 @@ Partial Class Form5
         Me.ExDateDataGridViewTextBoxColumn.Name = "ExDateDataGridViewTextBoxColumn"
         Me.ExDateDataGridViewTextBoxColumn.Width = 106
         '
-        'ExpenBindingSource
-        '
-        Me.ExpenBindingSource.DataMember = "expen"
-        Me.ExpenBindingSource.DataSource = Me.ShopDataSet1
-        '
         'ExpenTableAdapter
         '
         Me.ExpenTableAdapter.ClearBeforeFill = True
@@ -488,18 +488,6 @@ Partial Class Form5
         Me.Label11.TabIndex = 31
         Me.Label11.Text = "บาท"
         '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.Red
-        Me.Label12.Location = New System.Drawing.Point(23, 488)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(359, 17)
-        Me.Label12.TabIndex = 32
-        Me.Label12.Text = "*หากต้องการลบข้อมูล กรุณาเลือกข้อมูลจากช่องรหัสเท่านั้น"
-        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -508,9 +496,9 @@ Partial Class Form5
         Me.Label13.ForeColor = System.Drawing.Color.Red
         Me.Label13.Location = New System.Drawing.Point(28, 224)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(359, 17)
+        Me.Label13.Size = New System.Drawing.Size(454, 17)
         Me.Label13.TabIndex = 33
-        Me.Label13.Text = "*หากต้องการลบข้อมูล กรุณาเลือกข้อมูลจากช่องรหัสเท่านั้น"
+        Me.Label13.Text = "*หากต้องการเพิ่ม ลบ หรือแก้ไขข้อมูล กรุณาเลือกข้อมูลจากช่องรหัสเท่านั้น"
         '
         'IncomeTableAdapter1
         '
@@ -522,7 +510,7 @@ Partial Class Form5
         Me.sum3.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.sum3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.sum3.ForeColor = System.Drawing.Color.Red
-        Me.sum3.Location = New System.Drawing.Point(414, 546)
+        Me.sum3.Location = New System.Drawing.Point(889, 530)
         Me.sum3.Name = "sum3"
         Me.sum3.Size = New System.Drawing.Size(24, 25)
         Me.sum3.TabIndex = 34
@@ -532,7 +520,7 @@ Partial Class Form5
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(262, 546)
+        Me.Label14.Location = New System.Drawing.Point(737, 530)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(120, 25)
         Me.Label14.TabIndex = 35
@@ -542,7 +530,7 @@ Partial Class Form5
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(470, 546)
+        Me.Label15.Location = New System.Drawing.Point(945, 530)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(43, 25)
         Me.Label15.TabIndex = 36
@@ -571,7 +559,7 @@ Partial Class Form5
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(882, 546)
+        Me.Button1.Location = New System.Drawing.Point(885, -3)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(103, 37)
         Me.Button1.TabIndex = 39
@@ -582,7 +570,7 @@ Partial Class Form5
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(31, 645)
+        Me.TabControl1.Location = New System.Drawing.Point(31, 577)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(935, 301)
@@ -596,8 +584,20 @@ Partial Class Form5
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(927, 272)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "TabPage1"
+        Me.TabPage1.Text = "รายงานรายรับ"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'ReportViewer2
+        '
+        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Value = Me.IncomeBindingSource
+        Me.ReportViewer2.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer2.LocalReport.ReportEmbeddedResource = "RMS_Project.ReportIncome.rdlc"
+        Me.ReportViewer2.Location = New System.Drawing.Point(6, 0)
+        Me.ReportViewer2.Name = "ReportViewer2"
+        Me.ReportViewer2.ServerReport.BearerToken = Nothing
+        Me.ReportViewer2.Size = New System.Drawing.Size(918, 246)
+        Me.ReportViewer2.TabIndex = 0
         '
         'TabPage2
         '
@@ -607,26 +607,14 @@ Partial Class Form5
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(927, 272)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
+        Me.TabPage2.Text = "รายงานรายจ่าย"
         Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'ReportViewer2
-        '
-        ReportDataSource3.Name = "DataSet1"
-        ReportDataSource3.Value = Me.IncomeBindingSource
-        Me.ReportViewer2.LocalReport.DataSources.Add(ReportDataSource3)
-        Me.ReportViewer2.LocalReport.ReportEmbeddedResource = "RMS_Project.ReportIncome.rdlc"
-        Me.ReportViewer2.Location = New System.Drawing.Point(6, 0)
-        Me.ReportViewer2.Name = "ReportViewer2"
-        Me.ReportViewer2.ServerReport.BearerToken = Nothing
-        Me.ReportViewer2.Size = New System.Drawing.Size(918, 246)
-        Me.ReportViewer2.TabIndex = 0
         '
         'ReportViewer1
         '
-        ReportDataSource4.Name = "DataSet1"
-        ReportDataSource4.Value = Me.ExpenBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource4)
+        ReportDataSource2.Name = "DataSet1"
+        ReportDataSource2.Value = Me.ExpenBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "RMS_Project.Reportexpen.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 3)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -638,17 +626,30 @@ Partial Class Form5
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(36, 604)
+        Me.Label18.Location = New System.Drawing.Point(36, 536)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(66, 25)
         Me.Label18.TabIndex = 42
         Me.Label18.Text = "รายงาน"
         '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.Red
+        Me.Label19.Location = New System.Drawing.Point(32, 488)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(454, 17)
+        Me.Label19.TabIndex = 43
+        Me.Label19.Text = "*หากต้องการเพิ่ม ลบ หรือแก้ไขข้อมูล กรุณาเลือกข้อมูลจากช่องรหัสเท่านั้น"
+        '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1269, 1011)
+        Me.ClientSize = New System.Drawing.Size(1007, 1055)
+        Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Button1)
@@ -658,7 +659,6 @@ Partial Class Form5
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.sum3)
         Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
@@ -692,11 +692,11 @@ Partial Class Form5
         Me.Text = "รายรับรายจ่าย"
         CType(Me.IncomeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ShopDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ExpenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ShopDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IncomeBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ShopDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ExpenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
@@ -747,7 +747,6 @@ Partial Class Form5
     Friend WithEvents ExNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ExPriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ExDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents IncomeBindingSource1 As BindingSource
     Friend WithEvents IncomeTableAdapter1 As ShopDataSet1TableAdapters.incomeTableAdapter
@@ -763,4 +762,5 @@ Partial Class Form5
     Friend WithEvents ReportViewer2 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents Label18 As Label
+    Friend WithEvents Label19 As Label
 End Class
