@@ -94,4 +94,18 @@ Public Class Form5
 
 
     End Sub
+
+    Private Sub edit1_Click(sender As Object, e As EventArgs) Handles edit1.Click
+        If con.State = ConnectionState.Open Then
+            con.Close()
+        End If
+        con.Open()
+
+        cmd = con.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "update income set incomeName='" & inname.Text & "', IncomePrice='" & inprice.Text & "', IncomeDate='" & DateTimeIncome.Value & "' where incomeID=" & i & ""
+        cmd.ExecuteNonQuery()
+        disp_data()
+
+    End Sub
 End Class
