@@ -239,12 +239,12 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("TH SarabunPSK", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(667, 336)
+        Me.Button1.Font = New System.Drawing.Font("TH SarabunPSK", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(630, 345)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(93, 48)
+        Me.Button1.Size = New System.Drawing.Size(130, 39)
         Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Form 5"
+        Me.Button1.Text = "รายรับ - รายจ่าย"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Form1
