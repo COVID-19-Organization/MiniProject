@@ -26,6 +26,8 @@ Public Class Form5
         disp_data()
 
         MessageBox.Show("Yess")
+
+
     End Sub
 
     Public Sub disp_data()
@@ -40,6 +42,9 @@ Public Class Form5
 
         da.Fill(dt)
         DataGridView1.DataSource = dt
+        inID.Text = ""
+        inname.Text = ""
+        inprice.Text = ""
 
     End Sub
 
@@ -51,6 +56,7 @@ Public Class Form5
         con.Open()
 
         i = Convert.ToInt64(DataGridView1.SelectedCells.Item(0).Value.ToString())
+
 
         cmd = con.CreateCommand()
         cmd.CommandType = CommandType.Text
@@ -70,6 +76,22 @@ Public Class Form5
             DateTimeIncome.Value = dr.GetDateTime(3).ToString()
 
         End While
+
+    End Sub
+
+    Private Sub del1_Click(sender As Object, e As EventArgs) Handles del1.Click
+        If con.State = ConnectionState.Open Then
+            con.Close()
+        End If
+        con.Open()
+
+        cmd = con.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "delete from income where incomeID='" & inID.Text & "'"
+        cmd.ExecuteNonQuery()
+
+        disp_data()
+
 
     End Sub
 End Class

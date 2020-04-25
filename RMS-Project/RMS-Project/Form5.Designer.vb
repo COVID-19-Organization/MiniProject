@@ -39,8 +39,8 @@ Partial Class Form5
         Me.IncomeDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IncomeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ShopDataSet = New RMS_Project.ShopDataSet()
+        Me.edit1 = New System.Windows.Forms.Button()
         Me.del1 = New System.Windows.Forms.Button()
-        Me.edit2 = New System.Windows.Forms.Button()
         Me.IncomeTableAdapter = New RMS_Project.ShopDataSetTableAdapters.incomeTableAdapter()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IncomeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -189,25 +189,25 @@ Partial Class Form5
         Me.ShopDataSet.DataSetName = "ShopDataSet"
         Me.ShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'edit1
+        '
+        Me.edit1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.edit1.Location = New System.Drawing.Point(176, 209)
+        Me.edit1.Name = "edit1"
+        Me.edit1.Size = New System.Drawing.Size(103, 37)
+        Me.edit1.TabIndex = 12
+        Me.edit1.Text = "แก้ไข"
+        Me.edit1.UseVisualStyleBackColor = True
+        '
         'del1
         '
         Me.del1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.del1.Location = New System.Drawing.Point(176, 209)
+        Me.del1.Location = New System.Drawing.Point(285, 209)
         Me.del1.Name = "del1"
         Me.del1.Size = New System.Drawing.Size(103, 37)
-        Me.del1.TabIndex = 12
-        Me.del1.Text = "บันทึก"
+        Me.del1.TabIndex = 13
+        Me.del1.Text = "ลบ"
         Me.del1.UseVisualStyleBackColor = True
-        '
-        'edit2
-        '
-        Me.edit2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.edit2.Location = New System.Drawing.Point(285, 209)
-        Me.edit2.Name = "edit2"
-        Me.edit2.Size = New System.Drawing.Size(103, 37)
-        Me.edit2.TabIndex = 13
-        Me.edit2.Text = "บันทึก"
-        Me.edit2.UseVisualStyleBackColor = True
         '
         'IncomeTableAdapter
         '
@@ -218,8 +218,8 @@ Partial Class Form5
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1269, 450)
-        Me.Controls.Add(Me.edit2)
         Me.Controls.Add(Me.del1)
+        Me.Controls.Add(Me.edit1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -249,8 +249,8 @@ Partial Class Form5
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents edit1 As Button
     Friend WithEvents del1 As Button
-    Friend WithEvents edit2 As Button
     Friend WithEvents ShopDataSet As ShopDataSet
     Friend WithEvents IncomeBindingSource As BindingSource
     Friend WithEvents IncomeTableAdapter As ShopDataSetTableAdapters.incomeTableAdapter
