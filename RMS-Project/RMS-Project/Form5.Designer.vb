@@ -33,18 +33,18 @@ Partial Class Form5
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.del1 = New System.Windows.Forms.Button()
-        Me.edit2 = New System.Windows.Forms.Button()
-        Me.ShopDataSet = New RMS_Project.ShopDataSet()
-        Me.IncomeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IncomeTableAdapter = New RMS_Project.ShopDataSetTableAdapters.incomeTableAdapter()
         Me.IncomeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IncomeNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IncomePriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IncomeDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IncomeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ShopDataSet = New RMS_Project.ShopDataSet()
+        Me.del1 = New System.Windows.Forms.Button()
+        Me.edit2 = New System.Windows.Forms.Button()
+        Me.IncomeTableAdapter = New RMS_Project.ShopDataSetTableAdapters.incomeTableAdapter()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ShopDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IncomeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ShopDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'inID
@@ -136,46 +136,12 @@ Partial Class Form5
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IncomeIDDataGridViewTextBoxColumn, Me.IncomeNameDataGridViewTextBoxColumn, Me.IncomePriceDataGridViewTextBoxColumn, Me.IncomeDateDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.IncomeBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(416, 65)
+        Me.DataGridView1.Location = New System.Drawing.Point(463, 62)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(550, 184)
         Me.DataGridView1.TabIndex = 11
-        '
-        'del1
-        '
-        Me.del1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.del1.Location = New System.Drawing.Point(176, 209)
-        Me.del1.Name = "del1"
-        Me.del1.Size = New System.Drawing.Size(103, 37)
-        Me.del1.TabIndex = 12
-        Me.del1.Text = "บันทึก"
-        Me.del1.UseVisualStyleBackColor = True
-        '
-        'edit2
-        '
-        Me.edit2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.edit2.Location = New System.Drawing.Point(285, 209)
-        Me.edit2.Name = "edit2"
-        Me.edit2.Size = New System.Drawing.Size(103, 37)
-        Me.edit2.TabIndex = 13
-        Me.edit2.Text = "บันทึก"
-        Me.edit2.UseVisualStyleBackColor = True
-        '
-        'ShopDataSet
-        '
-        Me.ShopDataSet.DataSetName = "ShopDataSet"
-        Me.ShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'IncomeBindingSource
-        '
-        Me.IncomeBindingSource.DataMember = "income"
-        Me.IncomeBindingSource.DataSource = Me.ShopDataSet
-        '
-        'IncomeTableAdapter
-        '
-        Me.IncomeTableAdapter.ClearBeforeFill = True
         '
         'IncomeIDDataGridViewTextBoxColumn
         '
@@ -184,7 +150,7 @@ Partial Class Form5
         Me.IncomeIDDataGridViewTextBoxColumn.HeaderText = "รหัสรายรับ"
         Me.IncomeIDDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.IncomeIDDataGridViewTextBoxColumn.Name = "IncomeIDDataGridViewTextBoxColumn"
-        Me.IncomeIDDataGridViewTextBoxColumn.Width = 95
+        Me.IncomeIDDataGridViewTextBoxColumn.Width = 74
         '
         'IncomeNameDataGridViewTextBoxColumn
         '
@@ -213,6 +179,40 @@ Partial Class Form5
         Me.IncomeDateDataGridViewTextBoxColumn.Name = "IncomeDateDataGridViewTextBoxColumn"
         Me.IncomeDateDataGridViewTextBoxColumn.Width = 125
         '
+        'IncomeBindingSource
+        '
+        Me.IncomeBindingSource.DataMember = "income"
+        Me.IncomeBindingSource.DataSource = Me.ShopDataSet
+        '
+        'ShopDataSet
+        '
+        Me.ShopDataSet.DataSetName = "ShopDataSet"
+        Me.ShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'del1
+        '
+        Me.del1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.del1.Location = New System.Drawing.Point(176, 209)
+        Me.del1.Name = "del1"
+        Me.del1.Size = New System.Drawing.Size(103, 37)
+        Me.del1.TabIndex = 12
+        Me.del1.Text = "บันทึก"
+        Me.del1.UseVisualStyleBackColor = True
+        '
+        'edit2
+        '
+        Me.edit2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.edit2.Location = New System.Drawing.Point(285, 209)
+        Me.edit2.Name = "edit2"
+        Me.edit2.Size = New System.Drawing.Size(103, 37)
+        Me.edit2.TabIndex = 13
+        Me.edit2.Text = "บันทึก"
+        Me.edit2.UseVisualStyleBackColor = True
+        '
+        'IncomeTableAdapter
+        '
+        Me.IncomeTableAdapter.ClearBeforeFill = True
+        '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -233,8 +233,8 @@ Partial Class Form5
         Me.Name = "Form5"
         Me.Text = "รายรับรายจ่าย"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ShopDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IncomeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ShopDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
