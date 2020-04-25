@@ -128,6 +128,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="food.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>food.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +244,17 @@
     </None>
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="food.xsc">
+      <DependentUpon>food.xsd</DependentUpon>
+    </None>
+    <None Include="food.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>food.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="food.xss">
+      <DependentUpon>food.xsd</DependentUpon>
     </None>
     <None Include="menu.xsc">
       <DependentUpon>menu.xsd</DependentUpon>
