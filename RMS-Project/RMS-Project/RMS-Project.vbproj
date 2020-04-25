@@ -180,6 +180,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ShopDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShopDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="table.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -247,6 +252,17 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="ShopDataSet.xsc">
+      <DependentUpon>ShopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ShopDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShopDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShopDataSet.xss">
+      <DependentUpon>ShopDataSet.xsd</DependentUpon>
+    </None>
     <None Include="table.xsc">
       <DependentUpon>table.xsd</DependentUpon>
     </None>
