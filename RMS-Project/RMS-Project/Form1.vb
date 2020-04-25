@@ -120,6 +120,13 @@ Public Class Form1
                 stableempty = stableempty - 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Full' where table_id='3'"
+                cmd.ExecuteNonQuery()
+                disp_data()
+
             End If
         Else
             If MessageBox.Show("คุณต้องการจะเช็คบิลโต๊ะ A3 ใช่หรือไม่ ?", "เช็คบิลโต๊ะ", MessageBoxButtons.YesNo) = DialogResult.Yes Then
@@ -128,6 +135,13 @@ Public Class Form1
                 stableempty = stableempty + 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Empty' where table_id='3'"
+                cmd.ExecuteNonQuery()
+                disp_data()
+
             End If
         End If
     End Sub
@@ -140,6 +154,13 @@ Public Class Form1
                 stableempty = stableempty - 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Full' where table_id='4'"
+                cmd.ExecuteNonQuery()
+                disp_data()
+
             End If
         Else
             If MessageBox.Show("คุณต้องการจะเช็คบิลโต๊ะ A4 ใช่หรือไม่ ?", "เช็คบิลโต๊ะ", MessageBoxButtons.YesNo) = DialogResult.Yes Then
@@ -148,6 +169,13 @@ Public Class Form1
                 stableempty = stableempty + 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Empty' where table_id='4'"
+                cmd.ExecuteNonQuery()
+                disp_data()
+
             End If
         End If
     End Sub
@@ -160,6 +188,13 @@ Public Class Form1
                 stableempty = stableempty - 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Full' where table_id='5'"
+                cmd.ExecuteNonQuery()
+                disp_data()
+
             End If
         Else
             If MessageBox.Show("คุณต้องการจะเช็คบิลโต๊ะ A5 ใช่หรือไม่ ?", "เช็คบิลโต๊ะ", MessageBoxButtons.YesNo) = DialogResult.Yes Then
@@ -168,6 +203,13 @@ Public Class Form1
                 stableempty = stableempty + 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Empty' where table_id='5'"
+                cmd.ExecuteNonQuery()
+                disp_data()
+
             End If
         End If
     End Sub
@@ -180,6 +222,13 @@ Public Class Form1
                 stableempty = stableempty - 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Full' where table_id='6'"
+                cmd.ExecuteNonQuery()
+                disp_data()
+
             End If
         Else
             If MessageBox.Show("คุณต้องการจะเช็คบิลโต๊ะ B1 ใช่หรือไม่ ?", "เช็คบิลโต๊ะ", MessageBoxButtons.YesNo) = DialogResult.Yes Then
@@ -188,6 +237,13 @@ Public Class Form1
                 stableempty = stableempty + 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Empty' where table_id='6'"
+                cmd.ExecuteNonQuery()
+                disp_data()
+
             End If
         End If
     End Sub
@@ -200,6 +256,13 @@ Public Class Form1
                 stableempty = stableempty - 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Full' where table_id='7'"
+                cmd.ExecuteNonQuery()
+                disp_data()
+
             End If
         Else
             If MessageBox.Show("คุณต้องการจะเช็คบิลโต๊ะ B1 ใช่หรือไม่ ?", "เช็คบิลโต๊ะ", MessageBoxButtons.YesNo) = DialogResult.Yes Then
@@ -208,6 +271,13 @@ Public Class Form1
                 stableempty = stableempty + 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Empty' where table_id='7'"
+                cmd.ExecuteNonQuery()
+                disp_data()
+
             End If
         End If
     End Sub
@@ -220,6 +290,13 @@ Public Class Form1
                 stableempty = stableempty - 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Full' where table_id='8'"
+                cmd.ExecuteNonQuery()
+                disp_data()
+
             End If
         Else
             If MessageBox.Show("คุณต้องการจะเช็คบิลโต๊ะ B3 ใช่หรือไม่ ?", "เช็คบิลโต๊ะ", MessageBoxButtons.YesNo) = DialogResult.Yes Then
@@ -228,6 +305,13 @@ Public Class Form1
                 stableempty = stableempty + 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Empty' where table_id='8'"
+                cmd.ExecuteNonQuery()
+                disp_data()
+
             End If
         End If
     End Sub
@@ -240,6 +324,13 @@ Public Class Form1
                 stableempty = stableempty - 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Full' where table_id='9'"
+                cmd.ExecuteNonQuery()
+                disp_data()
+
             End If
         Else
             If MessageBox.Show("คุณต้องการจะเช็คบิลโต๊ะ B4 ใช่หรือไม่ ?", "เช็คบิลโต๊ะ", MessageBoxButtons.YesNo) = DialogResult.Yes Then
@@ -248,6 +339,13 @@ Public Class Form1
                 stableempty = stableempty + 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Empty' where table_id='9'"
+                cmd.ExecuteNonQuery()
+                disp_data()
+
             End If
         End If
     End Sub
@@ -260,6 +358,13 @@ Public Class Form1
                 stableempty = stableempty - 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Full' where table_id='10'"
+                cmd.ExecuteNonQuery()
+                disp_data()
+
             End If
         Else
             If MessageBox.Show("คุณต้องการจะเช็คบิลโต๊ะ B5 ใช่หรือไม่ ?", "เช็คบิลโต๊ะ", MessageBoxButtons.YesNo) = DialogResult.Yes Then
@@ -268,6 +373,13 @@ Public Class Form1
                 stableempty = stableempty + 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Empty' where table_id='10'"
+                cmd.ExecuteNonQuery()
+                disp_data()
+
             End If
         End If
     End Sub
