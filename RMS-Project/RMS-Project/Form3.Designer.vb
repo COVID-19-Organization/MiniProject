@@ -23,313 +23,122 @@ Partial Class b
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.btnTableB5 = New System.Windows.Forms.Button()
-        Me.btnTableB4 = New System.Windows.Forms.Button()
-        Me.btnTableB3 = New System.Windows.Forms.Button()
-        Me.btnTableB2 = New System.Windows.Forms.Button()
-        Me.btnTableB1 = New System.Windows.Forms.Button()
-        Me.btnTableA5 = New System.Windows.Forms.Button()
-        Me.btnTableA4 = New System.Windows.Forms.Button()
-        Me.btnTableA3 = New System.Windows.Forms.Button()
-        Me.btnTableA2 = New System.Windows.Forms.Button()
-        Me.btnTableA1 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.DateTimeIncome = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.submit = New System.Windows.Forms.Button()
         Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Table1 = New RMS_Project.table()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.emptytable = New System.Windows.Forms.Button()
-        Me.busytable = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.listfood = New System.Windows.Forms.ListBox()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Table1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button6
-        '
-        Me.Button6.BackColor = System.Drawing.Color.LightGreen
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(129, 150)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(187, 42)
-        Me.Button6.TabIndex = 6
-        Me.Button6.Text = "หมูทอดกรอบ"
-        Me.Button6.UseVisualStyleBackColor = False
-        '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.LightGreen
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(176, 100)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(140, 42)
-        Me.Button5.TabIndex = 5
-        Me.Button5.Text = "ข้าวผัดหมู"
-        Me.Button5.UseVisualStyleBackColor = False
-        '
-        'Button7
-        '
-        Me.Button7.BackColor = System.Drawing.Color.LightGreen
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(8, 150)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(113, 42)
-        Me.Button7.TabIndex = 7
-        Me.Button7.Text = "เป็ดนึ่ง"
-        Me.Button7.UseVisualStyleBackColor = False
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.LightGreen
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(8, 100)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(160, 42)
-        Me.Button4.TabIndex = 4
-        Me.Button4.Text = "ข้าวหน้าเป็ด"
-        Me.Button4.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.LightGreen
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(443, 50)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(134, 42)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "ข้าวไก่อบ"
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button9
-        '
-        Me.Button9.BackColor = System.Drawing.Color.LightGreen
-        Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(324, 100)
-        Me.Button9.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(175, 42)
-        Me.Button9.TabIndex = 9
-        Me.Button9.Text = "ข้าวหมูกรอบ"
-        Me.Button9.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.LightGreen
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(332, 50)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(103, 42)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "ข้าวผัด"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.LightGreen
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(190, 50)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(134, 42)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "ข้าวต้มกุ้ง"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Button10
-        '
-        Me.Button10.BackColor = System.Drawing.Color.LightGreen
-        Me.Button10.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.Location = New System.Drawing.Point(8, 50)
-        Me.Button10.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(174, 42)
-        Me.Button10.TabIndex = 0
-        Me.Button10.Text = "ข้าวขาหมูตุ๋น"
-        Me.Button10.UseVisualStyleBackColor = False
-        '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Button6)
-        Me.GroupBox2.Controls.Add(Me.Button5)
-        Me.GroupBox2.Controls.Add(Me.Button7)
-        Me.GroupBox2.Controls.Add(Me.Button4)
-        Me.GroupBox2.Controls.Add(Me.Button8)
-        Me.GroupBox2.Controls.Add(Me.Button3)
-        Me.GroupBox2.Controls.Add(Me.Button9)
-        Me.GroupBox2.Controls.Add(Me.Button2)
-        Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Me.Button10)
+        Me.GroupBox2.Controls.Add(Me.DataGridView1)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(3, 286)
+        Me.GroupBox2.Location = New System.Drawing.Point(472, 4)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Size = New System.Drawing.Size(616, 233)
+        Me.GroupBox2.Size = New System.Drawing.Size(534, 515)
         Me.GroupBox2.TabIndex = 12
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "เลือกเมนูอาหารที่จะสั่ง"
         '
-        'Button8
+        'DataGridView1
         '
-        Me.Button8.BackColor = System.Drawing.Color.LightGreen
-        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.Location = New System.Drawing.Point(324, 150)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(113, 42)
-        Me.Button8.TabIndex = 8
-        Me.Button8.Text = "ไก่ทอด"
-        Me.Button8.UseVisualStyleBackColor = False
-        '
-        'btnTableB5
-        '
-        Me.btnTableB5.BackColor = System.Drawing.Color.LightGreen
-        Me.btnTableB5.Location = New System.Drawing.Point(493, 117)
-        Me.btnTableB5.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnTableB5.Name = "btnTableB5"
-        Me.btnTableB5.Size = New System.Drawing.Size(113, 59)
-        Me.btnTableB5.TabIndex = 9
-        Me.btnTableB5.Text = "B5"
-        Me.btnTableB5.UseVisualStyleBackColor = False
-        '
-        'btnTableB4
-        '
-        Me.btnTableB4.BackColor = System.Drawing.Color.LightGreen
-        Me.btnTableB4.Location = New System.Drawing.Point(372, 117)
-        Me.btnTableB4.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnTableB4.Name = "btnTableB4"
-        Me.btnTableB4.Size = New System.Drawing.Size(113, 59)
-        Me.btnTableB4.TabIndex = 8
-        Me.btnTableB4.Text = "B4"
-        Me.btnTableB4.UseVisualStyleBackColor = False
-        '
-        'btnTableB3
-        '
-        Me.btnTableB3.BackColor = System.Drawing.Color.LightGreen
-        Me.btnTableB3.Location = New System.Drawing.Point(251, 117)
-        Me.btnTableB3.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnTableB3.Name = "btnTableB3"
-        Me.btnTableB3.Size = New System.Drawing.Size(113, 59)
-        Me.btnTableB3.TabIndex = 7
-        Me.btnTableB3.Text = "B3"
-        Me.btnTableB3.UseVisualStyleBackColor = False
-        '
-        'btnTableB2
-        '
-        Me.btnTableB2.BackColor = System.Drawing.Color.LightGreen
-        Me.btnTableB2.Location = New System.Drawing.Point(129, 117)
-        Me.btnTableB2.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnTableB2.Name = "btnTableB2"
-        Me.btnTableB2.Size = New System.Drawing.Size(113, 59)
-        Me.btnTableB2.TabIndex = 6
-        Me.btnTableB2.Text = "B2"
-        Me.btnTableB2.UseVisualStyleBackColor = False
-        '
-        'btnTableB1
-        '
-        Me.btnTableB1.BackColor = System.Drawing.Color.LightGreen
-        Me.btnTableB1.Location = New System.Drawing.Point(8, 117)
-        Me.btnTableB1.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnTableB1.Name = "btnTableB1"
-        Me.btnTableB1.Size = New System.Drawing.Size(113, 59)
-        Me.btnTableB1.TabIndex = 5
-        Me.btnTableB1.Text = "B1"
-        Me.btnTableB1.UseVisualStyleBackColor = False
-        '
-        'btnTableA5
-        '
-        Me.btnTableA5.BackColor = System.Drawing.Color.LightGreen
-        Me.btnTableA5.Location = New System.Drawing.Point(493, 50)
-        Me.btnTableA5.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnTableA5.Name = "btnTableA5"
-        Me.btnTableA5.Size = New System.Drawing.Size(113, 59)
-        Me.btnTableA5.TabIndex = 4
-        Me.btnTableA5.Text = "A5"
-        Me.btnTableA5.UseVisualStyleBackColor = False
-        '
-        'btnTableA4
-        '
-        Me.btnTableA4.BackColor = System.Drawing.Color.LightGreen
-        Me.btnTableA4.Location = New System.Drawing.Point(372, 50)
-        Me.btnTableA4.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnTableA4.Name = "btnTableA4"
-        Me.btnTableA4.Size = New System.Drawing.Size(113, 59)
-        Me.btnTableA4.TabIndex = 3
-        Me.btnTableA4.Text = "A4"
-        Me.btnTableA4.UseVisualStyleBackColor = False
-        '
-        'btnTableA3
-        '
-        Me.btnTableA3.BackColor = System.Drawing.Color.LightGreen
-        Me.btnTableA3.Location = New System.Drawing.Point(251, 50)
-        Me.btnTableA3.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnTableA3.Name = "btnTableA3"
-        Me.btnTableA3.Size = New System.Drawing.Size(113, 59)
-        Me.btnTableA3.TabIndex = 2
-        Me.btnTableA3.Text = "A3"
-        Me.btnTableA3.UseVisualStyleBackColor = False
-        '
-        'btnTableA2
-        '
-        Me.btnTableA2.BackColor = System.Drawing.Color.LightGreen
-        Me.btnTableA2.Location = New System.Drawing.Point(129, 50)
-        Me.btnTableA2.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnTableA2.Name = "btnTableA2"
-        Me.btnTableA2.Size = New System.Drawing.Size(113, 59)
-        Me.btnTableA2.TabIndex = 1
-        Me.btnTableA2.Text = "A2"
-        Me.btnTableA2.UseVisualStyleBackColor = False
-        '
-        'btnTableA1
-        '
-        Me.btnTableA1.BackColor = System.Drawing.Color.LightGreen
-        Me.btnTableA1.Location = New System.Drawing.Point(8, 50)
-        Me.btnTableA1.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnTableA1.Name = "btnTableA1"
-        Me.btnTableA1.Size = New System.Drawing.Size(113, 59)
-        Me.btnTableA1.TabIndex = 0
-        Me.btnTableA1.Text = "A1"
-        Me.btnTableA1.UseVisualStyleBackColor = False
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(7, 54)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(520, 426)
+        Me.DataGridView1.TabIndex = 0
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.btnTableB5)
-        Me.GroupBox1.Controls.Add(Me.btnTableB4)
-        Me.GroupBox1.Controls.Add(Me.btnTableB3)
-        Me.GroupBox1.Controls.Add(Me.btnTableB2)
-        Me.GroupBox1.Controls.Add(Me.btnTableB1)
-        Me.GroupBox1.Controls.Add(Me.btnTableA5)
-        Me.GroupBox1.Controls.Add(Me.btnTableA4)
-        Me.GroupBox1.Controls.Add(Me.btnTableA3)
-        Me.GroupBox1.Controls.Add(Me.btnTableA2)
-        Me.GroupBox1.Controls.Add(Me.btnTableA1)
+        Me.GroupBox1.Controls.Add(Me.listfood)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.DateTimeIncome)
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.Button2)
+        Me.GroupBox1.Controls.Add(Me.submit)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 13)
+        Me.GroupBox1.Location = New System.Drawing.Point(13, 4)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(616, 188)
+        Me.GroupBox1.Size = New System.Drawing.Size(451, 515)
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "เลือกโต๊ะอาหาร"
+        Me.GroupBox1.Text = "สั่งอาหาร"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(24, 70)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(67, 36)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "วันที่"
+        '
+        'DateTimeIncome
+        '
+        Me.DateTimeIncome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimeIncome.Location = New System.Drawing.Point(117, 74)
+        Me.DateTimeIncome.Name = "DateTimeIncome"
+        Me.DateTimeIncome.Size = New System.Drawing.Size(327, 30)
+        Me.DateTimeIncome.TabIndex = 7
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(117, 120)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(205, 38)
+        Me.TextBox1.TabIndex = 3
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(24, 126)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(56, 32)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "โต๊ะ"
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(228, 448)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(109, 41)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "ยกเลิก"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'submit
+        '
+        Me.submit.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.submit.Location = New System.Drawing.Point(30, 448)
+        Me.submit.Name = "submit"
+        Me.submit.Size = New System.Drawing.Size(140, 41)
+        Me.submit.TabIndex = 0
+        Me.submit.Text = "สั่งอาหาร"
+        Me.submit.UseVisualStyleBackColor = True
         '
         'DataTable1BindingSource
         '
@@ -341,46 +150,15 @@ Partial Class b
         Me.Table1.DataSetName = "table"
         Me.Table1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'TextBox1
+        'listfood
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(755, 160)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(235, 41)
-        Me.TextBox1.TabIndex = 13
-        '
-        'emptytable
-        '
-        Me.emptytable.BackColor = System.Drawing.Color.LightGreen
-        Me.emptytable.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.emptytable.Location = New System.Drawing.Point(21, 219)
-        Me.emptytable.Margin = New System.Windows.Forms.Padding(4)
-        Me.emptytable.Name = "emptytable"
-        Me.emptytable.Size = New System.Drawing.Size(113, 59)
-        Me.emptytable.TabIndex = 10
-        Me.emptytable.Text = "ว่าง"
-        Me.emptytable.UseVisualStyleBackColor = False
-        '
-        'busytable
-        '
-        Me.busytable.BackColor = System.Drawing.Color.Crimson
-        Me.busytable.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.busytable.Location = New System.Drawing.Point(142, 219)
-        Me.busytable.Margin = New System.Windows.Forms.Padding(4)
-        Me.busytable.Name = "busytable"
-        Me.busytable.Size = New System.Drawing.Size(113, 59)
-        Me.busytable.TabIndex = 14
-        Me.busytable.Text = "ไม่ว่าง"
-        Me.busytable.UseVisualStyleBackColor = False
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(755, 88)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(235, 33)
-        Me.ComboBox1.TabIndex = 15
+        Me.listfood.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.listfood.FormattingEnabled = True
+        Me.listfood.ItemHeight = 29
+        Me.listfood.Location = New System.Drawing.Point(7, 202)
+        Me.listfood.Name = "listfood"
+        Me.listfood.Size = New System.Drawing.Size(307, 207)
+        Me.listfood.TabIndex = 11
         '
         'b
         '
@@ -388,49 +166,29 @@ Partial Class b
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(1019, 532)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.busytable)
-        Me.Controls.Add(Me.emptytable)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "b"
         Me.Text = "Form3"
         Me.GroupBox2.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Table1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button9 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button10 As Button
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Button8 As Button
-    Friend WithEvents btnTableB5 As Button
-    Friend WithEvents btnTableB4 As Button
-    Friend WithEvents btnTableB3 As Button
-    Friend WithEvents btnTableB2 As Button
-    Friend WithEvents btnTableB1 As Button
-    Friend WithEvents btnTableA5 As Button
-    Friend WithEvents btnTableA4 As Button
-    Friend WithEvents btnTableA3 As Button
-    Friend WithEvents btnTableA2 As Button
-    Friend WithEvents btnTableA1 As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents DataTable1BindingSource As BindingSource
     Friend WithEvents Table1 As table
+    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents emptytable As Button
-    Friend WithEvents busytable As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Button2 As Button
+    Friend WithEvents submit As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents DateTimeIncome As DateTimePicker
+    Friend WithEvents listfood As ListBox
 End Class
