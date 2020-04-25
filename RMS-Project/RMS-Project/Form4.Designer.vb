@@ -39,6 +39,8 @@ Partial Class Form4
         Me.OrderdateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TableidDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TotalpriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShopDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,10 +70,10 @@ Partial Class Form4
         ReportDataSource1.Value = Me.incomeBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "RMS_Project.ReportIncome.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(121, 330)
+        Me.ReportViewer1.Location = New System.Drawing.Point(50, 330)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(514, 243)
+        Me.ReportViewer1.Size = New System.Drawing.Size(813, 243)
         Me.ReportViewer1.TabIndex = 2
         '
         'ShopDataSet1
@@ -147,11 +149,33 @@ Partial Class Form4
         Me.TotalpriceDataGridViewTextBoxColumn.Name = "TotalpriceDataGridViewTextBoxColumn"
         Me.TotalpriceDataGridViewTextBoxColumn.Width = 125
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(115, 18)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(47, 32)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "บิล"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(58, 284)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(177, 32)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "รายงานรายรับ"
+        '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(875, 585)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "Form4"
@@ -164,6 +188,7 @@ Partial Class Form4
         CType(Me.ShopDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -182,4 +207,6 @@ Partial Class Form4
     Friend WithEvents OrderdateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TableidDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TotalpriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class
