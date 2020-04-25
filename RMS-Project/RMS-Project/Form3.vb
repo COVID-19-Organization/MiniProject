@@ -27,7 +27,7 @@ Public Class b
         TextBox2.Text = DataGridView1.Item(0, i).Value
         TextBox3.Text = DataGridView1.Item(1, i).Value
 
-        TextBox4.Text = TextBox3.Text * Num1.Text
+        
 
 
     End Sub
@@ -35,7 +35,7 @@ Public Class b
     Private Sub submit_Click(sender As Object, e As EventArgs) Handles submit.Click
         cmd = con.CreateCommand()
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "insert into foodorder values('','" & TextBox1.Text & "','" & cbbTable.Text & "','" & sum.Text & "')"
+        cmd.CommandText = "insert into order values ('" & order_id.Text & "', '" & DateTimeIncome.Value & "', '" + TextBox2.Text + "', '" + cbbTable.Text + "', '" + TextBox4.Text + "', '" & Num1.Value & "');"
         cmd.ExecuteNonQuery()
 
         MessageBox.Show("ยืนยันแล้ว")
@@ -44,7 +44,7 @@ Public Class b
     Private Sub disp_data()
         cmd = con.CreateCommand()
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "Select *from foodorder"
+        cmd.CommandText = "Select *from order"
         cmd.ExecuteNonQuery()
 
         Dim dt As New DataTable()
@@ -53,16 +53,17 @@ Public Class b
         DataGridView2.DataSource = dt
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles sub2.Click
-        cmd = con.CreateCommand()
-        cmd.CommandType = CommandType.Text
-        cmd.CommandText = "insert into foodorder values('" & TextBox1.Text & "','" & TextBox2.Text & "','" & Num1.Text & "')"
-        cmd.ExecuteNonQuery()
-
-        MessageBox.Show("สั่งอาหารแล้ว")
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Bu1.Click
+        Dim sumorder As Int64
+        sumorder = TextBox3.Text * Num1.Text
+        TextBox4.Text = sumorder.ToString
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Bu1.Click
-        TextBox4.Text = TextBox3.Text * Num1.Text
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
+    End Sub
+
+    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
+
     End Sub
 End Class

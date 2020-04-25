@@ -37,8 +37,6 @@ Partial Class b
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Num1 = New System.Windows.Forms.NumericUpDown()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.cbbTable = New System.Windows.Forms.ComboBox()
         Me.ShoptableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Table = New RMS_Project.table()
@@ -52,7 +50,8 @@ Partial Class b
         Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Table1 = New RMS_Project.table()
         Me.ShoptableTableAdapter = New RMS_Project.tableTableAdapters.shoptableTableAdapter()
-        Me.sub2 = New System.Windows.Forms.Button()
+        Me.order_id = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Food, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,6 +102,8 @@ Partial Class b
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.order_id)
         Me.GroupBox1.Controls.Add(Me.Bu1)
         Me.GroupBox1.Controls.Add(Me.TextBox4)
         Me.GroupBox1.Controls.Add(Me.sum)
@@ -111,8 +112,6 @@ Partial Class b
         Me.GroupBox1.Controls.Add(Me.TextBox3)
         Me.GroupBox1.Controls.Add(Me.Num1)
         Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.cbbTable)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -148,7 +147,7 @@ Partial Class b
         'sum
         '
         Me.sum.AutoSize = True
-        Me.sum.Location = New System.Drawing.Point(341, 295)
+        Me.sum.Location = New System.Drawing.Point(10, 169)
         Me.sum.Name = "sum"
         Me.sum.Size = New System.Drawing.Size(31, 18)
         Me.sum.TabIndex = 37
@@ -197,25 +196,6 @@ Partial Class b
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(211, 29)
         Me.TextBox2.TabIndex = 32
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(200, 70)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(79, 20)
-        Me.Label5.TabIndex = 31
-        Me.Label5.Text = "รหัสออเดอร์"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(286, 67)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(62, 26)
-        Me.TextBox1.TabIndex = 30
         '
         'cbbTable
         '
@@ -298,9 +278,9 @@ Partial Class b
         Me.submit.Location = New System.Drawing.Point(125, 160)
         Me.submit.Margin = New System.Windows.Forms.Padding(2)
         Me.submit.Name = "submit"
-        Me.submit.Size = New System.Drawing.Size(73, 33)
+        Me.submit.Size = New System.Drawing.Size(113, 33)
         Me.submit.TabIndex = 0
-        Me.submit.Text = "ยืนยัน"
+        Me.submit.Text = "สั่งอาหาร"
         Me.submit.UseVisualStyleBackColor = True
         '
         'FoodTableAdapter
@@ -321,16 +301,21 @@ Partial Class b
         '
         Me.ShoptableTableAdapter.ClearBeforeFill = True
         '
-        'sub2
+        'order_id
         '
-        Me.sub2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.sub2.Location = New System.Drawing.Point(558, 328)
-        Me.sub2.Margin = New System.Windows.Forms.Padding(2)
-        Me.sub2.Name = "sub2"
-        Me.sub2.Size = New System.Drawing.Size(108, 33)
-        Me.sub2.TabIndex = 37
-        Me.sub2.Text = "สั่งอาหาร"
-        Me.sub2.UseVisualStyleBackColor = True
+        Me.order_id.Location = New System.Drawing.Point(319, 38)
+        Me.order_id.Name = "order_id"
+        Me.order_id.Size = New System.Drawing.Size(100, 24)
+        Me.order_id.TabIndex = 41
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(291, 42)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(22, 18)
+        Me.Label5.TabIndex = 42
+        Me.Label5.Text = "ID"
         '
         'b
         '
@@ -338,7 +323,6 @@ Partial Class b
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(764, 432)
-        Me.Controls.Add(Me.sub2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Margin = New System.Windows.Forms.Padding(2)
@@ -380,12 +364,11 @@ Partial Class b
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents sub2 As Button
     Friend WithEvents sum As Label
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Num1 As NumericUpDown
     Friend WithEvents Bu1 As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents order_id As TextBox
 End Class
