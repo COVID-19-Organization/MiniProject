@@ -75,6 +75,7 @@ Partial Class Form5
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IncomeBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShopDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -556,11 +557,22 @@ Partial Class Form5
         Me.Label17.TabIndex = 38
         Me.Label17.Text = "รายรับ"
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(882, 546)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(103, 37)
+        Me.Button1.TabIndex = 39
+        Me.Button1.Text = "ปิดหน้าต่าง"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1269, 742)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label15)
@@ -662,4 +674,5 @@ Partial Class Form5
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
+    Friend WithEvents Button1 As Button
 End Class

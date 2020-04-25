@@ -31,7 +31,7 @@ Public Class Form5
         disp_data()
         disp_data2()
 
-        MessageBox.Show("Yess")
+        MessageBox.Show("เพิ่มข้อมูลสำเร็จ")
 
 
     End Sub
@@ -106,7 +106,7 @@ Public Class Form5
         cmd.ExecuteNonQuery()
         disp_data()
         disp_data2()
-
+        MessageBox.Show("ลบข้อมูลสำเร็จ")
 
     End Sub
 
@@ -122,6 +122,7 @@ Public Class Form5
         cmd.ExecuteNonQuery()
         disp_data()
         disp_data2()
+        MessageBox.Show("แก้ไขข้อมูลสำเร็จ")
     End Sub
 
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
@@ -163,7 +164,7 @@ Public Class Form5
 
         disp_data()
         disp_data2()
-        MessageBox.Show("Yess")
+        MessageBox.Show("เพิ่มข้อมูลสำเร็จ")
 
     End Sub
     Public Sub disp_data2()
@@ -207,7 +208,7 @@ Public Class Form5
 
         disp_data()
         disp_data2()
-
+        MessageBox.Show("ลบข้อมูลสำเร็จ")
     End Sub
 
     Private Sub edit2_Click(sender As Object, e As EventArgs) Handles edit2.Click
@@ -222,7 +223,10 @@ Public Class Form5
         cmd.ExecuteNonQuery()
         disp_data()
         disp_data2()
+        MessageBox.Show("แก้ไขข้อมูลสำเร็จ")
     End Sub
 
-
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
 End Class
