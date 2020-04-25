@@ -29,10 +29,13 @@ Partial Class b
         Me.FoodBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Food = New RMS_Project.food()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Bu1 = New System.Windows.Forms.Button()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.sum = New System.Windows.Forms.Label()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Num1 = New System.Windows.Forms.NumericUpDown()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -50,19 +53,16 @@ Partial Class b
         Me.Table1 = New RMS_Project.table()
         Me.ShoptableTableAdapter = New RMS_Project.tableTableAdapters.shoptableTableAdapter()
         Me.sub2 = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Num1 = New System.Windows.Forms.NumericUpDown()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Food, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Num1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShoptableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Table1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Num1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -103,7 +103,7 @@ Partial Class b
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.Bu1)
         Me.GroupBox1.Controls.Add(Me.TextBox4)
         Me.GroupBox1.Controls.Add(Me.sum)
         Me.GroupBox1.Controls.Add(Me.DataGridView2)
@@ -128,10 +128,27 @@ Partial Class b
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "สั่งอาหาร"
         '
+        'Bu1
+        '
+        Me.Bu1.Location = New System.Drawing.Point(354, 93)
+        Me.Bu1.Name = "Bu1"
+        Me.Bu1.Size = New System.Drawing.Size(66, 29)
+        Me.Bu1.TabIndex = 40
+        Me.Bu1.Text = "เป็นเงินทั้งสิ้น"
+        Me.Bu1.UseVisualStyleBackColor = True
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.Location = New System.Drawing.Point(357, 128)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(62, 26)
+        Me.TextBox4.TabIndex = 38
+        '
         'sum
         '
         Me.sum.AutoSize = True
-        Me.sum.Location = New System.Drawing.Point(59, 365)
+        Me.sum.Location = New System.Drawing.Point(341, 295)
         Me.sum.Name = "sum"
         Me.sum.Size = New System.Drawing.Size(31, 18)
         Me.sum.TabIndex = 37
@@ -141,7 +158,7 @@ Partial Class b
         '
         Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(13, 208)
+        Me.DataGridView2.Location = New System.Drawing.Point(13, 239)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.Size = New System.Drawing.Size(318, 150)
         Me.DataGridView2.TabIndex = 36
@@ -164,6 +181,14 @@ Partial Class b
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(62, 26)
         Me.TextBox3.TabIndex = 34
+        '
+        'Num1
+        '
+        Me.Num1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Num1.Location = New System.Drawing.Point(286, 126)
+        Me.Num1.Name = "Num1"
+        Me.Num1.Size = New System.Drawing.Size(42, 29)
+        Me.Num1.TabIndex = 33
         '
         'TextBox2
         '
@@ -299,40 +324,13 @@ Partial Class b
         'sub2
         '
         Me.sub2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.sub2.Location = New System.Drawing.Point(557, 328)
+        Me.sub2.Location = New System.Drawing.Point(558, 328)
         Me.sub2.Margin = New System.Windows.Forms.Padding(2)
         Me.sub2.Name = "sub2"
         Me.sub2.Size = New System.Drawing.Size(108, 33)
         Me.sub2.TabIndex = 37
         Me.sub2.Text = "สั่งอาหาร"
         Me.sub2.UseVisualStyleBackColor = True
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(344, 128)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(62, 26)
-        Me.TextBox4.TabIndex = 38
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(350, 105)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(54, 20)
-        Me.Label7.TabIndex = 39
-        Me.Label7.Text = "ทั้งหมด"
-        '
-        'Num1
-        '
-        Me.Num1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Num1.Location = New System.Drawing.Point(286, 126)
-        Me.Num1.Name = "Num1"
-        Me.Num1.Size = New System.Drawing.Size(42, 29)
-        Me.Num1.TabIndex = 33
         '
         'b
         '
@@ -352,11 +350,11 @@ Partial Class b
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Num1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ShoptableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Table1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Num1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -388,6 +386,6 @@ Partial Class b
     Friend WithEvents sub2 As Button
     Friend WithEvents sum As Label
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label7 As Label
     Friend WithEvents Num1 As NumericUpDown
+    Friend WithEvents Bu1 As Button
 End Class

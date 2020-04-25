@@ -61,4 +61,8 @@ Public Class b
 
         MessageBox.Show("สั่งอาหารแล้ว")
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Bu1.Click
+        TextBox4.Text = TextBox3.Text * Num1.Text
+    End Sub
 End Class
