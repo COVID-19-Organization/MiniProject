@@ -1,3 +1,3 @@
-﻿Public Class reportincome
+﻿Public Class ReportIncome
 
 End Class

@@ -21,6 +21,10 @@ Public Class Form5
         con.Open()
         disp_data()
         disp_data2()
+        Me.ReportViewer1.RefreshReport
+        Me.ReportViewer2.RefreshReport
+        Me.ReportViewer2.RefreshReport
+        Me.ReportViewer1.RefreshReport
     End Sub
 
     Private Sub btn1_Click(sender As Object, e As EventArgs) Handles save1.Click
