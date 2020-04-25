@@ -53,6 +53,10 @@ Partial Class Form5
         Me.exName = New System.Windows.Forms.TextBox()
         Me.exId = New System.Windows.Forms.TextBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.ExIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ExNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ExPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ExDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ExpenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ShopDataSet1 = New RMS_Project.ShopDataSet1()
         Me.ExpenTableAdapter = New RMS_Project.ShopDataSet1TableAdapters.expenTableAdapter()
@@ -62,10 +66,8 @@ Partial Class Form5
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.ExIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ExNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ExPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ExDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IncomeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShopDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -348,6 +350,41 @@ Partial Class Form5
         Me.DataGridView2.Size = New System.Drawing.Size(550, 179)
         Me.DataGridView2.TabIndex = 25
         '
+        'ExIdDataGridViewTextBoxColumn
+        '
+        Me.ExIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.ExIdDataGridViewTextBoxColumn.DataPropertyName = "exId"
+        Me.ExIdDataGridViewTextBoxColumn.HeaderText = "รหัสรายจ่าย"
+        Me.ExIdDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ExIdDataGridViewTextBoxColumn.Name = "ExIdDataGridViewTextBoxColumn"
+        '
+        'ExNameDataGridViewTextBoxColumn
+        '
+        Me.ExNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.ExNameDataGridViewTextBoxColumn.DataPropertyName = "exName"
+        Me.ExNameDataGridViewTextBoxColumn.HeaderText = "รหัสรายรับ"
+        Me.ExNameDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ExNameDataGridViewTextBoxColumn.Name = "ExNameDataGridViewTextBoxColumn"
+        Me.ExNameDataGridViewTextBoxColumn.Width = 95
+        '
+        'ExPriceDataGridViewTextBoxColumn
+        '
+        Me.ExPriceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.ExPriceDataGridViewTextBoxColumn.DataPropertyName = "exPrice"
+        Me.ExPriceDataGridViewTextBoxColumn.HeaderText = "จำนวนเงิน"
+        Me.ExPriceDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ExPriceDataGridViewTextBoxColumn.Name = "ExPriceDataGridViewTextBoxColumn"
+        Me.ExPriceDataGridViewTextBoxColumn.Width = 94
+        '
+        'ExDateDataGridViewTextBoxColumn
+        '
+        Me.ExDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ExDateDataGridViewTextBoxColumn.DataPropertyName = "exDate"
+        Me.ExDateDataGridViewTextBoxColumn.HeaderText = "วันที่และเวลา"
+        Me.ExDateDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ExDateDataGridViewTextBoxColumn.Name = "ExDateDataGridViewTextBoxColumn"
+        Me.ExDateDataGridViewTextBoxColumn.Width = 106
+        '
         'ExpenBindingSource
         '
         Me.ExpenBindingSource.DataMember = "expen"
@@ -426,46 +463,37 @@ Partial Class Form5
         Me.Label11.TabIndex = 31
         Me.Label11.Text = "บาท"
         '
-        'ExIdDataGridViewTextBoxColumn
+        'Label12
         '
-        Me.ExIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.ExIdDataGridViewTextBoxColumn.DataPropertyName = "exId"
-        Me.ExIdDataGridViewTextBoxColumn.HeaderText = "รหัสรายจ่าย"
-        Me.ExIdDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.ExIdDataGridViewTextBoxColumn.Name = "ExIdDataGridViewTextBoxColumn"
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.Red
+        Me.Label12.Location = New System.Drawing.Point(23, 488)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(359, 17)
+        Me.Label12.TabIndex = 32
+        Me.Label12.Text = "*หากต้องการลบข้อมูล กรุณาเลือกข้อมูลจากช่องรหัสเท่านั้น"
         '
-        'ExNameDataGridViewTextBoxColumn
+        'Label13
         '
-        Me.ExNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.ExNameDataGridViewTextBoxColumn.DataPropertyName = "exName"
-        Me.ExNameDataGridViewTextBoxColumn.HeaderText = "รหัสรายรับ"
-        Me.ExNameDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.ExNameDataGridViewTextBoxColumn.Name = "ExNameDataGridViewTextBoxColumn"
-        Me.ExNameDataGridViewTextBoxColumn.Width = 95
-        '
-        'ExPriceDataGridViewTextBoxColumn
-        '
-        Me.ExPriceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.ExPriceDataGridViewTextBoxColumn.DataPropertyName = "exPrice"
-        Me.ExPriceDataGridViewTextBoxColumn.HeaderText = "จำนวนเงิน"
-        Me.ExPriceDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.ExPriceDataGridViewTextBoxColumn.Name = "ExPriceDataGridViewTextBoxColumn"
-        Me.ExPriceDataGridViewTextBoxColumn.Width = 94
-        '
-        'ExDateDataGridViewTextBoxColumn
-        '
-        Me.ExDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ExDateDataGridViewTextBoxColumn.DataPropertyName = "exDate"
-        Me.ExDateDataGridViewTextBoxColumn.HeaderText = "วันที่และเวลา"
-        Me.ExDateDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.ExDateDataGridViewTextBoxColumn.Name = "ExDateDataGridViewTextBoxColumn"
-        Me.ExDateDataGridViewTextBoxColumn.Width = 106
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.Red
+        Me.Label13.Location = New System.Drawing.Point(28, 224)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(359, 17)
+        Me.Label13.TabIndex = 33
+        Me.Label13.Text = "*หากต้องการลบข้อมูล กรุณาเลือกข้อมูลจากช่องรหัสเท่านั้น"
         '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1269, 519)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
@@ -550,4 +578,6 @@ Partial Class Form5
     Friend WithEvents ExNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ExPriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ExDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
 End Class
