@@ -23,9 +23,9 @@ Partial Class Form4
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+
         Me.DataSet1 = New RMS_Project.DataSet1()
         Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataTable1TableAdapter = New RMS_Project.DataSet1TableAdapters.DataTable1TableAdapter()
@@ -44,15 +44,7 @@ Partial Class Form4
         '
         'ReportViewer1
         '
-        ReportDataSource2.Name = "DataSet1"
-        ReportDataSource2.Value = Me.DataTable1BindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "RMS_Project.receipt.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 12)
-        Me.ReportViewer1.Name = "ReportViewer1"
 
-        Me.ReportViewer1.Size = New System.Drawing.Size(865, 452)
-        Me.ReportViewer1.TabIndex = 2
         '
         'DataSet1
         '
@@ -73,7 +65,7 @@ Partial Class Form4
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1233, 490)
-        Me.Controls.Add(Me.ReportViewer1)
+
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form4"
         Me.Text = "ใบเสร็จ"
@@ -84,7 +76,7 @@ Partial Class Form4
     End Sub
 
     Friend WithEvents Button1 As Button
-    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+
     Friend WithEvents DataTable1BindingSource As BindingSource
     Friend WithEvents DataSet1 As DataSet1
     Friend WithEvents DataTable1TableAdapter As DataSet1TableAdapters.DataTable1TableAdapter
