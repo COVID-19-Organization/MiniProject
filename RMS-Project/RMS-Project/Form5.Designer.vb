@@ -31,7 +31,6 @@ Partial Class Form5
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.IncomeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IncomeNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,20 +41,37 @@ Partial Class Form5
         Me.edit1 = New System.Windows.Forms.Button()
         Me.del1 = New System.Windows.Forms.Button()
         Me.IncomeTableAdapter = New RMS_Project.ShopDataSetTableAdapters.incomeTableAdapter()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.del2 = New System.Windows.Forms.Button()
+        Me.edit2 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.exDate = New System.Windows.Forms.DateTimePicker()
+        Me.exPrice = New System.Windows.Forms.TextBox()
+        Me.add2 = New System.Windows.Forms.Button()
+        Me.exName = New System.Windows.Forms.TextBox()
+        Me.exId = New System.Windows.Forms.TextBox()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.ExIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ExNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ExPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ExDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ExpenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ShopDataSet1 = New RMS_Project.ShopDataSet1()
+        Me.ExpenTableAdapter = New RMS_Project.ShopDataSet1TableAdapters.expenTableAdapter()
+        Me.sum1 = New System.Windows.Forms.Label()
+        Me.sum2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IncomeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShopDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ExpenBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ShopDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'inID
@@ -82,7 +98,7 @@ Partial Class Form5
         Me.save1.Name = "save1"
         Me.save1.Size = New System.Drawing.Size(103, 37)
         Me.save1.TabIndex = 4
-        Me.save1.Text = "บันทึก"
+        Me.save1.Text = "เพิ่ม"
         Me.save1.UseVisualStyleBackColor = True
         '
         'inprice
@@ -130,16 +146,6 @@ Partial Class Form5
         Me.Label3.Size = New System.Drawing.Size(108, 25)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "จำนวน(บาท)"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(11, 148)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(45, 25)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "วันที่"
         '
         'DataGridView1
         '
@@ -203,7 +209,7 @@ Partial Class Form5
         'edit1
         '
         Me.edit1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.edit1.Location = New System.Drawing.Point(170, 184)
+        Me.edit1.Location = New System.Drawing.Point(279, 184)
         Me.edit1.Name = "edit1"
         Me.edit1.Size = New System.Drawing.Size(103, 37)
         Me.edit1.TabIndex = 12
@@ -213,7 +219,7 @@ Partial Class Form5
         'del1
         '
         Me.del1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.del1.Location = New System.Drawing.Point(279, 184)
+        Me.del1.Location = New System.Drawing.Point(170, 184)
         Me.del1.Name = "del1"
         Me.del1.Size = New System.Drawing.Size(103, 37)
         Me.del1.TabIndex = 13
@@ -224,25 +230,25 @@ Partial Class Form5
         '
         Me.IncomeTableAdapter.ClearBeforeFill = True
         '
-        'Button1
+        'del2
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(279, 450)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(103, 37)
-        Me.Button1.TabIndex = 24
-        Me.Button1.Text = "ลบ"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.del2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.del2.Location = New System.Drawing.Point(170, 448)
+        Me.del2.Name = "del2"
+        Me.del2.Size = New System.Drawing.Size(103, 37)
+        Me.del2.TabIndex = 24
+        Me.del2.Text = "ลบ"
+        Me.del2.UseVisualStyleBackColor = True
         '
-        'Button2
+        'edit2
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(170, 450)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(103, 37)
-        Me.Button2.TabIndex = 23
-        Me.Button2.Text = "แก้ไข"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.edit2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.edit2.Location = New System.Drawing.Point(279, 448)
+        Me.edit2.Name = "edit2"
+        Me.edit2.Size = New System.Drawing.Size(103, 37)
+        Me.edit2.TabIndex = 23
+        Me.edit2.Text = "แก้ไข"
+        Me.edit2.UseVisualStyleBackColor = True
         '
         'Label5
         '
@@ -284,69 +290,196 @@ Partial Class Form5
         Me.Label8.TabIndex = 19
         Me.Label8.Text = "รหัสรายรับ"
         '
-        'DateTimePicker1
+        'exDate
         '
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Location = New System.Drawing.Point(130, 414)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(257, 30)
-        Me.DateTimePicker1.TabIndex = 18
+        Me.exDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.exDate.Location = New System.Drawing.Point(130, 414)
+        Me.exDate.Name = "exDate"
+        Me.exDate.Size = New System.Drawing.Size(257, 30)
+        Me.exDate.TabIndex = 18
         '
-        'TextBox1
+        'exPrice
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(130, 378)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(257, 30)
-        Me.TextBox1.TabIndex = 17
+        Me.exPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.exPrice.Location = New System.Drawing.Point(130, 378)
+        Me.exPrice.Name = "exPrice"
+        Me.exPrice.Size = New System.Drawing.Size(257, 30)
+        Me.exPrice.TabIndex = 17
         '
-        'Button3
+        'add2
         '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(61, 450)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(103, 37)
-        Me.Button3.TabIndex = 16
-        Me.Button3.Text = "บันทึก"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.add2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.add2.Location = New System.Drawing.Point(61, 448)
+        Me.add2.Name = "add2"
+        Me.add2.Size = New System.Drawing.Size(103, 37)
+        Me.add2.TabIndex = 16
+        Me.add2.Text = "เพิ่ม"
+        Me.add2.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'exName
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(130, 342)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(257, 30)
-        Me.TextBox2.TabIndex = 15
+        Me.exName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.exName.Location = New System.Drawing.Point(130, 342)
+        Me.exName.Name = "exName"
+        Me.exName.Size = New System.Drawing.Size(257, 30)
+        Me.exName.TabIndex = 15
         '
-        'TextBox3
+        'exId
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(130, 306)
-        Me.TextBox3.MaxLength = 5
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(257, 30)
-        Me.TextBox3.TabIndex = 14
+        Me.exId.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.exId.Location = New System.Drawing.Point(130, 306)
+        Me.exId.MaxLength = 5
+        Me.exId.Name = "exId"
+        Me.exId.Size = New System.Drawing.Size(257, 30)
+        Me.exId.TabIndex = 14
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AutoGenerateColumns = False
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ExIdDataGridViewTextBoxColumn, Me.ExNameDataGridViewTextBoxColumn, Me.ExPriceDataGridViewTextBoxColumn, Me.ExDateDataGridViewTextBoxColumn})
+        Me.DataGridView2.DataSource = Me.ExpenBindingSource
+        Me.DataGridView2.Location = New System.Drawing.Point(435, 306)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.RowHeadersWidth = 51
+        Me.DataGridView2.RowTemplate.Height = 24
+        Me.DataGridView2.Size = New System.Drawing.Size(550, 179)
+        Me.DataGridView2.TabIndex = 25
+        '
+        'ExIdDataGridViewTextBoxColumn
+        '
+        Me.ExIdDataGridViewTextBoxColumn.DataPropertyName = "exId"
+        Me.ExIdDataGridViewTextBoxColumn.HeaderText = "exId"
+        Me.ExIdDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ExIdDataGridViewTextBoxColumn.Name = "ExIdDataGridViewTextBoxColumn"
+        Me.ExIdDataGridViewTextBoxColumn.Width = 125
+        '
+        'ExNameDataGridViewTextBoxColumn
+        '
+        Me.ExNameDataGridViewTextBoxColumn.DataPropertyName = "exName"
+        Me.ExNameDataGridViewTextBoxColumn.HeaderText = "exName"
+        Me.ExNameDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ExNameDataGridViewTextBoxColumn.Name = "ExNameDataGridViewTextBoxColumn"
+        Me.ExNameDataGridViewTextBoxColumn.Width = 125
+        '
+        'ExPriceDataGridViewTextBoxColumn
+        '
+        Me.ExPriceDataGridViewTextBoxColumn.DataPropertyName = "exPrice"
+        Me.ExPriceDataGridViewTextBoxColumn.HeaderText = "exPrice"
+        Me.ExPriceDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ExPriceDataGridViewTextBoxColumn.Name = "ExPriceDataGridViewTextBoxColumn"
+        Me.ExPriceDataGridViewTextBoxColumn.Width = 125
+        '
+        'ExDateDataGridViewTextBoxColumn
+        '
+        Me.ExDateDataGridViewTextBoxColumn.DataPropertyName = "exDate"
+        Me.ExDateDataGridViewTextBoxColumn.HeaderText = "exDate"
+        Me.ExDateDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ExDateDataGridViewTextBoxColumn.Name = "ExDateDataGridViewTextBoxColumn"
+        Me.ExDateDataGridViewTextBoxColumn.Width = 125
+        '
+        'ExpenBindingSource
+        '
+        Me.ExpenBindingSource.DataMember = "expen"
+        Me.ExpenBindingSource.DataSource = Me.ShopDataSet1
+        '
+        'ShopDataSet1
+        '
+        Me.ShopDataSet1.DataSetName = "ShopDataSet1"
+        Me.ShopDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ExpenTableAdapter
+        '
+        Me.ExpenTableAdapter.ClearBeforeFill = True
+        '
+        'sum1
+        '
+        Me.sum1.AutoSize = True
+        Me.sum1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.sum1.ForeColor = System.Drawing.Color.Red
+        Me.sum1.Location = New System.Drawing.Point(565, 227)
+        Me.sum1.Name = "sum1"
+        Me.sum1.Size = New System.Drawing.Size(24, 25)
+        Me.sum1.TabIndex = 26
+        Me.sum1.Text = "0"
+        '
+        'sum2
+        '
+        Me.sum2.AutoSize = True
+        Me.sum2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.sum2.ForeColor = System.Drawing.Color.Red
+        Me.sum2.Location = New System.Drawing.Point(565, 485)
+        Me.sum2.Name = "sum2"
+        Me.sum2.Size = New System.Drawing.Size(24, 25)
+        Me.sum2.TabIndex = 27
+        Me.sum2.Text = "0"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(430, 227)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(95, 25)
+        Me.Label4.TabIndex = 28
+        Me.Label4.Text = "รวมรายรับ :"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(430, 485)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(103, 25)
+        Me.Label9.TabIndex = 29
+        Me.Label9.Text = "รวมรายจ่าย :"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(611, 227)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(43, 25)
+        Me.Label10.TabIndex = 30
+        Me.Label10.Text = "บาท"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(611, 485)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(43, 25)
+        Me.Label11.TabIndex = 31
+        Me.Label11.Text = "บาท"
         '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1269, 497)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Button2)
+        Me.ClientSize = New System.Drawing.Size(1269, 519)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.sum2)
+        Me.Controls.Add(Me.sum1)
+        Me.Controls.Add(Me.DataGridView2)
+        Me.Controls.Add(Me.del2)
+        Me.Controls.Add(Me.edit2)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.exDate)
+        Me.Controls.Add(Me.exPrice)
+        Me.Controls.Add(Me.add2)
+        Me.Controls.Add(Me.exName)
+        Me.Controls.Add(Me.exId)
         Me.Controls.Add(Me.del1)
         Me.Controls.Add(Me.edit1)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -360,6 +493,9 @@ Partial Class Form5
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IncomeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ShopDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ExpenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ShopDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -372,7 +508,6 @@ Partial Class Form5
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents edit1 As Button
     Friend WithEvents del1 As Button
@@ -383,15 +518,29 @@ Partial Class Form5
     Friend WithEvents IncomeNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IncomePriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IncomeDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents del2 As Button
+    Friend WithEvents edit2 As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button3 As Button
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents exDate As DateTimePicker
+    Friend WithEvents exPrice As TextBox
+    Friend WithEvents add2 As Button
+    Friend WithEvents exName As TextBox
+    Friend WithEvents exId As TextBox
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents ShopDataSet1 As ShopDataSet1
+    Friend WithEvents ExpenBindingSource As BindingSource
+    Friend WithEvents ExpenTableAdapter As ShopDataSet1TableAdapters.expenTableAdapter
+    Friend WithEvents ExIdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ExNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ExPriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ExDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents sum1 As Label
+    Friend WithEvents sum2 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
 End Class
