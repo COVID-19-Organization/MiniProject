@@ -1,15 +1,27 @@
-﻿Public Class Form1
+﻿Imports System.Data.SqlClient
+
+Public Class Form1
 
     Dim stablefull As Int64 = 0
     Dim stableempty As Int64 = 10
+
+    Dim con As New SqlConnection
+    Dim cmd As New SqlCommand
 
     Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
         b.Show()
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         disTableFull.Text = stablefull.ToString
         disTableEmpty.Text = stableempty.ToString
+
+        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\COVID-19-Organization\MiniProject\RMS-Project\RMS-Project\Shop.mdf;Integrated Security=True"
+        If con.State = ConnectionState.Open Then
+            con.Close()
+        End If
+        con.Open()
     End Sub
 
 
@@ -21,6 +33,12 @@
                 stableempty = stableempty - 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Full' where table_id='1'"
+                cmd.ExecuteNonQuery()
+
             End If
         Else
             If MessageBox.Show("คุณต้องการจะเช็คบิลโต๊ะ A1 ใช่หรือไม่ ?", "เช็คบิลโต๊ะ", MessageBoxButtons.YesNo) = DialogResult.Yes Then
@@ -29,6 +47,12 @@
                 stableempty = stableempty + 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Empty' where table_id='1'"
+                cmd.ExecuteNonQuery()
+
             End If
         End If
     End Sub
@@ -41,6 +65,12 @@
                 stableempty = stableempty - 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Full' where table_id='2'"
+                cmd.ExecuteNonQuery()
+
             End If
         Else
             If MessageBox.Show("คุณต้องการจะเช็คบิลโต๊ะ A2 ใช่หรือไม่ ?", "เช็คบิลโต๊ะ", MessageBoxButtons.YesNo) = DialogResult.Yes Then
@@ -49,6 +79,12 @@
                 stableempty = stableempty + 1
                 disTableFull.Text = stablefull.ToString
                 disTableEmpty.Text = stableempty.ToString
+
+                cmd = con.CreateCommand()
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "update shoptable set table_status ='Empty' where table_id='2'"
+                cmd.ExecuteNonQuery()
+
             End If
         End If
     End Sub
