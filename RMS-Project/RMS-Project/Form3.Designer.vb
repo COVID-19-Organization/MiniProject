@@ -34,12 +34,46 @@ Partial Class b
         Me.submit = New System.Windows.Forms.Button()
         Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Table1 = New RMS_Project.table()
-        Me.listfood = New System.Windows.Forms.ListBox()
+        Me.Food = New RMS_Project.food()
+        Me.FoodBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FoodTableAdapter = New RMS_Project.foodTableAdapters.foodTableAdapter()
+        Me.FoodnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FoodpriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.NumericUpDown3 = New System.Windows.Forms.NumericUpDown()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.NumericUpDown4 = New System.Windows.Forms.NumericUpDown()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.NumericUpDown5 = New System.Windows.Forms.NumericUpDown()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.NumericUpDown6 = New System.Windows.Forms.NumericUpDown()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.NumericUpDown7 = New System.Windows.Forms.NumericUpDown()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.NumericUpDown8 = New System.Windows.Forms.NumericUpDown()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Table1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Food, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -57,8 +91,11 @@ Partial Class b
         '
         'DataGridView1
         '
+        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FoodnameDataGridViewTextBoxColumn, Me.FoodpriceDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.FoodBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(7, 54)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 24
@@ -67,14 +104,32 @@ Partial Class b
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.listfood)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.NumericUpDown8)
+        Me.GroupBox1.Controls.Add(Me.TextBox9)
+        Me.GroupBox1.Controls.Add(Me.NumericUpDown7)
+        Me.GroupBox1.Controls.Add(Me.TextBox8)
+        Me.GroupBox1.Controls.Add(Me.NumericUpDown6)
+        Me.GroupBox1.Controls.Add(Me.TextBox7)
+        Me.GroupBox1.Controls.Add(Me.NumericUpDown5)
+        Me.GroupBox1.Controls.Add(Me.TextBox6)
+        Me.GroupBox1.Controls.Add(Me.NumericUpDown4)
+        Me.GroupBox1.Controls.Add(Me.TextBox5)
+        Me.GroupBox1.Controls.Add(Me.NumericUpDown3)
+        Me.GroupBox1.Controls.Add(Me.TextBox4)
+        Me.GroupBox1.Controls.Add(Me.NumericUpDown2)
+        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.NumericUpDown1)
+        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.DateTimeIncome)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.submit)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(13, 4)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
@@ -87,36 +142,36 @@ Partial Class b
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(24, 70)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(25, 42)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 36)
+        Me.Label2.Size = New System.Drawing.Size(55, 29)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "วันที่"
         '
         'DateTimeIncome
         '
-        Me.DateTimeIncome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimeIncome.Location = New System.Drawing.Point(117, 74)
+        Me.DateTimeIncome.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimeIncome.Location = New System.Drawing.Point(101, 45)
         Me.DateTimeIncome.Name = "DateTimeIncome"
-        Me.DateTimeIncome.Size = New System.Drawing.Size(327, 30)
+        Me.DateTimeIncome.Size = New System.Drawing.Size(290, 27)
         Me.DateTimeIncome.TabIndex = 7
         '
         'TextBox1
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(117, 120)
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(101, 84)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(205, 38)
+        Me.TextBox1.Size = New System.Drawing.Size(69, 30)
         Me.TextBox1.TabIndex = 3
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(24, 126)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(25, 84)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(56, 32)
+        Me.Label1.Size = New System.Drawing.Size(47, 29)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "โต๊ะ"
         '
@@ -150,15 +205,199 @@ Partial Class b
         Me.Table1.DataSetName = "table"
         Me.Table1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'listfood
+        'Food
         '
-        Me.listfood.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.listfood.FormattingEnabled = True
-        Me.listfood.ItemHeight = 29
-        Me.listfood.Location = New System.Drawing.Point(7, 202)
-        Me.listfood.Name = "listfood"
-        Me.listfood.Size = New System.Drawing.Size(307, 207)
-        Me.listfood.TabIndex = 11
+        Me.Food.DataSetName = "food"
+        Me.Food.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'FoodBindingSource
+        '
+        Me.FoodBindingSource.DataMember = "food"
+        Me.FoodBindingSource.DataSource = Me.Food
+        '
+        'FoodTableAdapter
+        '
+        Me.FoodTableAdapter.ClearBeforeFill = True
+        '
+        'FoodnameDataGridViewTextBoxColumn
+        '
+        Me.FoodnameDataGridViewTextBoxColumn.DataPropertyName = "food_name"
+        Me.FoodnameDataGridViewTextBoxColumn.HeaderText = "food_name"
+        Me.FoodnameDataGridViewTextBoxColumn.Name = "FoodnameDataGridViewTextBoxColumn"
+        '
+        'FoodpriceDataGridViewTextBoxColumn
+        '
+        Me.FoodpriceDataGridViewTextBoxColumn.DataPropertyName = "food_price"
+        Me.FoodpriceDataGridViewTextBoxColumn.HeaderText = "food_price"
+        Me.FoodpriceDataGridViewTextBoxColumn.Name = "FoodpriceDataGridViewTextBoxColumn"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(16, 127)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(137, 25)
+        Me.Label3.TabIndex = 9
+        Me.Label3.Text = "รายการอาหารที่สั่ง"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(321, 127)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(63, 25)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "จำนวน"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(18, 167)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(215, 28)
+        Me.TextBox2.TabIndex = 11
+        '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NumericUpDown1.Location = New System.Drawing.Point(311, 170)
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(73, 27)
+        Me.NumericUpDown1.TabIndex = 12
+        '
+        'NumericUpDown2
+        '
+        Me.NumericUpDown2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NumericUpDown2.Location = New System.Drawing.Point(311, 201)
+        Me.NumericUpDown2.Name = "NumericUpDown2"
+        Me.NumericUpDown2.Size = New System.Drawing.Size(73, 27)
+        Me.NumericUpDown2.TabIndex = 14
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(17, 201)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(215, 28)
+        Me.TextBox3.TabIndex = 13
+        '
+        'NumericUpDown3
+        '
+        Me.NumericUpDown3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NumericUpDown3.Location = New System.Drawing.Point(311, 235)
+        Me.NumericUpDown3.Name = "NumericUpDown3"
+        Me.NumericUpDown3.Size = New System.Drawing.Size(73, 27)
+        Me.NumericUpDown3.TabIndex = 16
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.Location = New System.Drawing.Point(17, 235)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(215, 28)
+        Me.TextBox4.TabIndex = 15
+        '
+        'NumericUpDown4
+        '
+        Me.NumericUpDown4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NumericUpDown4.Location = New System.Drawing.Point(311, 269)
+        Me.NumericUpDown4.Name = "NumericUpDown4"
+        Me.NumericUpDown4.Size = New System.Drawing.Size(73, 27)
+        Me.NumericUpDown4.TabIndex = 18
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Location = New System.Drawing.Point(17, 269)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(215, 28)
+        Me.TextBox5.TabIndex = 17
+        '
+        'NumericUpDown5
+        '
+        Me.NumericUpDown5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NumericUpDown5.Location = New System.Drawing.Point(311, 303)
+        Me.NumericUpDown5.Name = "NumericUpDown5"
+        Me.NumericUpDown5.Size = New System.Drawing.Size(73, 27)
+        Me.NumericUpDown5.TabIndex = 20
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox6.Location = New System.Drawing.Point(17, 303)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(215, 28)
+        Me.TextBox6.TabIndex = 19
+        '
+        'NumericUpDown6
+        '
+        Me.NumericUpDown6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NumericUpDown6.Location = New System.Drawing.Point(311, 337)
+        Me.NumericUpDown6.Name = "NumericUpDown6"
+        Me.NumericUpDown6.Size = New System.Drawing.Size(73, 27)
+        Me.NumericUpDown6.TabIndex = 22
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox7.Location = New System.Drawing.Point(17, 337)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(215, 28)
+        Me.TextBox7.TabIndex = 21
+        '
+        'NumericUpDown7
+        '
+        Me.NumericUpDown7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NumericUpDown7.Location = New System.Drawing.Point(311, 371)
+        Me.NumericUpDown7.Name = "NumericUpDown7"
+        Me.NumericUpDown7.Size = New System.Drawing.Size(73, 27)
+        Me.NumericUpDown7.TabIndex = 24
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox8.Location = New System.Drawing.Point(17, 371)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(215, 28)
+        Me.TextBox8.TabIndex = 23
+        '
+        'NumericUpDown8
+        '
+        Me.NumericUpDown8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NumericUpDown8.Location = New System.Drawing.Point(311, 405)
+        Me.NumericUpDown8.Name = "NumericUpDown8"
+        Me.NumericUpDown8.Size = New System.Drawing.Size(73, 27)
+        Me.NumericUpDown8.TabIndex = 26
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox9.Location = New System.Drawing.Point(17, 405)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(215, 28)
+        Me.TextBox9.TabIndex = 25
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(10, 177)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(20, 18)
+        Me.Label5.TabIndex = 27
+        Me.Label5.Text = "1."
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(-3, 207)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(20, 18)
+        Me.Label6.TabIndex = 28
+        Me.Label6.Text = "1."
         '
         'b
         '
@@ -166,6 +405,7 @@ Partial Class b
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(1019, 532)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "b"
@@ -176,7 +416,18 @@ Partial Class b
         Me.GroupBox1.PerformLayout()
         CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Table1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Food, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents GroupBox2 As GroupBox
@@ -190,5 +441,29 @@ Partial Class b
     Friend WithEvents submit As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents DateTimeIncome As DateTimePicker
-    Friend WithEvents listfood As ListBox
+    Friend WithEvents Food As food
+    Friend WithEvents FoodBindingSource As BindingSource
+    Friend WithEvents FoodTableAdapter As foodTableAdapters.foodTableAdapter
+    Friend WithEvents FoodnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FoodpriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents NumericUpDown8 As NumericUpDown
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents NumericUpDown7 As NumericUpDown
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents NumericUpDown6 As NumericUpDown
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents NumericUpDown5 As NumericUpDown
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents NumericUpDown4 As NumericUpDown
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents NumericUpDown3 As NumericUpDown
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents NumericUpDown2 As NumericUpDown
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label5 As Label
 End Class
