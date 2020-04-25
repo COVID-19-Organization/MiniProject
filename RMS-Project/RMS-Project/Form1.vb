@@ -24,6 +24,25 @@ Public Class Form1
         con.Open()
     End Sub
 
+    Public Sub disp_data()
+
+        cmd = con.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "Select * from shoptable where table_status = 'Full'"
+        cmd.ExecuteNonQuery()
+
+        Dim adapter As New SqlDataAdapter(cmd)
+        Dim table As New DataTable()
+
+        adapter.Fill(table)
+
+        b.cbbTable.DataSource = table
+        b.cbbTable.DisplayMember = "table_num"
+        b.cbbTable.ValueMember = "table_id"
+
+
+    End Sub
+
 
     Private Sub btnTableA1_Click(sender As Object, e As EventArgs) Handles btnTableA1.Click
         If btnTableA1.BackColor = Color.LightGreen Then
@@ -38,6 +57,7 @@ Public Class Form1
                 cmd.CommandType = CommandType.Text
                 cmd.CommandText = "update shoptable set table_status ='Full' where table_id='1'"
                 cmd.ExecuteNonQuery()
+                disp_data()
 
             End If
         Else
@@ -52,6 +72,7 @@ Public Class Form1
                 cmd.CommandType = CommandType.Text
                 cmd.CommandText = "update shoptable set table_status ='Empty' where table_id='1'"
                 cmd.ExecuteNonQuery()
+                disp_data()
 
             End If
         End If
@@ -70,6 +91,7 @@ Public Class Form1
                 cmd.CommandType = CommandType.Text
                 cmd.CommandText = "update shoptable set table_status ='Full' where table_id='2'"
                 cmd.ExecuteNonQuery()
+                disp_data()
 
             End If
         Else
@@ -84,6 +106,7 @@ Public Class Form1
                 cmd.CommandType = CommandType.Text
                 cmd.CommandText = "update shoptable set table_status ='Empty' where table_id='2'"
                 cmd.ExecuteNonQuery()
+                disp_data()
 
             End If
         End If
